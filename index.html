@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Money Management for students">
+    <meta name="keywords" content="money management">
+    <meta name="author" content="Hubert Kwan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f98f8eda6d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>MoneyMatters | Home</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="nav-wrapper">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="images/logo-cropped.svg" alt="MoneyMatters Logo">
+                    </a>
+                </div>
+
+                <div class="search-container" id="searchContainer">
+                    <input type="text" class="expandable-search-input" placeholder="Search...">
+                    <button class="search-icon-btn" id="searchToggleBtn" aria-label="Toggle Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger-btn" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+
+                <div class="nav-links">
+                    <div class="home">
+                        <i class="fa-solid fa-house"></i>
+                        <a href="index.html" class="active">Home</a>
+                    </div>
+                    <div class="earning-tax">
+                        <i class="fa-solid fa-wallet"></i>
+                        <a href="earning_tax.html">Earning & Taxes</a>
+                    </div>
+                    <div class="saving-invest">
+                        <i class="fa-solid fa-piggy-bank"></i>
+                        <a href="saving_invest.html">Saving & Investment</a>
+                    </div>
+                    <div class="budgeting-traps">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                        <a href="budgeting_traps.html">Budgeting & Traps</a>
+                    </div>
+                    <div class="support-hub">
+                        <i class="fa-solid fa-headset"></i>
+                        <a href="support_hub.html">Support Hub</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="hero-banner index">
+            <div class="banner-container">
+                <div class="hero-left">
+                    <div class="hero-content">
+                        <h1>Where are you on your money journey?</h1>
+                        <p>Money can feel confusing when you are just starting out. MoneyMatters breaks financial topics into simple steps so you can learn what you need for real-lide situations.</p>
+                    </div>
+                    <div class="hero-btns">
+                        <a class="explore-btn" href="earning_tax.html">Explore More</a>
+                        <button class="register-btn">Register</button> 
+                        <button class="login-btn">Login</button>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <img src="images/hero_banner.png" alt="A man holding a ipad and think of money management">
+                </div>
+            </div>
+           
+        </section>
+
+    <main class="container">
+        <section class="situation-section">
+            <div class="section-heading">
+                <h2>Find Your Situation</h2>
+            </div>
+            <div class="situation-cards">
+                <a href="earning_tax.html" class="situation-card blue">
+                    <div class="situation-img-container">
+                        <img src="images/wallet.png" alt="a sample credit card with a safe shield">
+                    </div>
+                    <h3>I Just Got My First Job</h3>
+                    <p>Starting your first job comes with new responsibilities. Learn how to read your payslip, understand PAYE and KiwiSaver.</p>
+                </a>
+                <a href="saving_invest.html" class="situation-card red">
+                    <div class="situation-img-container">
+                        <img src="images/piggy_bank.png" alt="A pggy with money inserting">
+                    </div>
+                    <h3>I Want to Save Money</h3>
+                    <p>Whether you are saving for a car, university, a trip, or something else, learn how bank accounts, compound interest, and savings goals can help.</p>
+                </a>
+                    
+                
+                <a href="budgeting_traps.html" class="situation-card yellow">
+                    <div class="situation-img-container">
+                        <img src="images/credit_card_safe.png" alt="a sample credit card with a safe shield">
+                    </div>
+                    <h3>I Just Got My First Job</h3>
+                    <p>Learn how to separate needs from wants, create a budget, understand credit, and recognise common debt traps before they become a problem.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="useful-tools-section">
+            <div class="section-heading">
+                <h2>Useful Tools</h2>
+            </div>
+            <div class="tool-cards">
+                <a href="earning_tax.html#paycheck-calculator-section" class="tool-card">
+                    <div class="tool-img-container">
+                        <img src="images/calculator.png" alt="A calculator with number on it">
+                    </div>
+                    <h3>Tax calculator</h3>
+                </a>
+
+               <a href="saving_invest.html#compound-interest-section" class="tool-card">
+                    <div class="tool-img-container">
+                        <img src="images/increase_flow.png" alt="A increasing chart">
+                    </div>
+                    <h3>Compound Interest Calculator</h3>
+               </a>
+
+                <a href="budgeting_traps.html#debts-growth-simulator-section" class="tool-card">
+                    <div class="tool-img-container">
+                        <img src="images/credit_card_danger.png" alt="A credit card with a triagnle danger icon">
+                    </div>
+                    <h3>Credit Card & Debts Simulator</h3>
+                </a>
+                    
+                <a href="budgeting_traps.html#budget-tool-section" class="tool-card">
+                    <div class="tool-img-container">
+                        <img src="images/budget.png" alt="A budget tool">
+                    </div>
+                    <h3>Budget Tool</h3>
+                </a>
+            </div>
+        </section>
+ 
+        <section class="payslip-section">
+            <div class="section-heading">
+            <h2>How a Payslip Looks like </h2>
+            </div>
+            <div class="payslip-container">
+                <div class="payslip-box">
+                    <div class="payslip-header">
+                        <span>Money Matters</span>
+                        <span>Pay Date: dd/mm/yyyy</span>
+                    </div>
+                    <!-- Earnings part -->
+                    <table class="payslip-table">
+                        <thead>
+                        <tr>
+                            <th>Earnings</th>
+                            <th>Quantity</th>
+                            <th>Rate</th>
+                            <th>Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Ordinary Hours</td>
+                            <td>xx hours</td>
+                            <td>$xx.xx</td>
+                            <td>$xx.xx</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td>Total Earnings</td>
+                            <td></td>
+                            <td></td>
+                            <td>$xx.xx</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Deductions part -->
+                    <table class="payslip-table">
+                        <thead>
+                        <tr>
+                            <th>Deductions</th>
+                            <th>Quantity</th>
+                            <th>Rate</th>
+                            <th>Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>PAYE Taxes</td>
+                            <td></td>
+                            <td></td>
+                            <td>$xx.xx</td>
+                        </tr>
+                        <tr>
+                            <td>Loans</td>
+                            <td></td>
+                            <td></td>
+                            <td>$xx.xx</td>
+                        </tr>
+                        <tr>
+                            <td>KiwiSaver</td>
+                            <td></td>
+                            <td></td>
+                            <td>$xx.xx</td>
+                        </tr>
+                        <tr class="deductions-total">
+                            <td>Total Deductions</td>
+                            <td></td>
+                            <td></td>
+                            <td>$xx.xx</td>
+                        </tr>
+                        <tr class="take-home-pay">
+                            <td>Take-Home Pay</td>
+                            <td></td>
+                            <td></td>
+                            <td>$xx.xx</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="payslip-content">
+                    <p>Payslip is a part of your life in the future very soon. Your payslip shows how your pay is calculated. It helps you understand where your money goes before the money reaches your bank account.</p>
+                    <a href="earning_tax.html">Learn How to Read It</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="translator-faqs-section">
+            <div class="jargon-container">
+                <div class="jargon-content">
+                    <div class="section-heading">
+                        <h2>Jargon Translator</h2>
+                    </div>
+                    <!-- Search Input -->
+                    <div class="jargon-search">
+                        <input type="text" placeholder="Search for a term">
+                    </div>
+                    <p class="popular-title">Popular Terms:</p>
+                    <div class="pills-container">
+                        <button type="button" class="pill">Gross pay</button>
+                        <button type="button" class="pill">Net pay</button>
+                        <button type="button" class="pill">Debts</button>
+                        <button type="button" class="pill">Payslip</button>
+                        <button type="button" class="pill">Compound Interest</button>
+                        <button type="button" class="pill">PAYE</button>
+                        <button type="button" class="pill">KiwiSaver</button>
+                        <button type="button" class="pill">Interest</button>
+                    </div>
+                </div>
+                <a href="support_hub.html" class="card-footer-link">
+                    Full Glossary <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-content">
+                    <div class="section-heading">
+                        <h2>FAQs Quick Help</h2>
+                    </div>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>
+                                <span>How much money should I save?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>There is no single amount that works for everyone. Start by looking at your income, essential expenses and savings goals. Even a small regular amount can help you build a saving habit.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>
+                                <span>Do I need a bank account when I get a job?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Most employers will need a way to pay your wages, and a bank account can make receiving and managing your income easier. But there always have exceptions, if you want to prevent things getting wrong, the best way is to ask the employers when you are getting a job.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>
+                                <span>Why is my take-home pay lower than my hourly wage?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Your gross pay is calculated from your earnings, but deductions such as PAYE and KiwiSaver may be taken before the money reaches your bank account.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>
+                                <span>Does earning more money mean I pay tax on all of it at the highest rate?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>No. New Zealand uses progressive tax rates. Different portions of your income are taxed at different rates.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>
+                                <span>Is saving better than spending?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Both are part of managing money. The goal is to make sure your important expenses are covered while also leaving room for saving and reasonable spending.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>
+                                <span>Is debt always bad?</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Not necessarily. Borrowing can have legitimate uses, but it creates an obligation to repay money and may involve interest and fees. Before borrowing, understand the total cost and whether you can afford the repayments.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- Bottom Link -->
+                <a href="support_hub.html" class="card-footer-link">
+                    More FAQs <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-container">
+        <div class="footer-logo">
+            <img class="footer-logo-img" src="images/footer_logo.png" alt="MoneyMatters Logo">
+            <img class="graduate-img" src="images/graduate.png" alt="Graduate Cap Graphic">
+        </div>
+
+        <div class="footer-sections-row">
+            <details class="site-map footer-details">
+                <summary class="footer-summary">
+                    <h4>Helpful Guides</h4>
+                    <i class="fa-solid fa-chevron-down footer-chevron"></i>
+                </summary>
+                <div class="footer-links-list">
+                    <div class="home"><i class="fa-solid fa-house"></i><a href="index.html" class="active">Home</a></div>
+                    <div class="earning_tax"><i class="fa-solid fa-wallet"></i><a href="earning_tax.html">Earning & Taxes</a></div>
+                    <div class="saving_invest"><i class="fa-solid fa-piggy-bank"></i><a href="saving_invest.html">Saving & Investment</a></div>
+                    <div class="budgeting_traps"><i class="fa-solid fa-scale-balanced"></i><a href="budgeting_traps.html">Budgeting & Traps</a></div>
+                    <div class="support_hub"><i class="fa-solid fa-headset"></i><a href="support_hub.html">Support Hub</a></div>
+                </div>
+            </details>
+
+            <details class="tool-map footer-details">
+                <summary class="footer-summary">
+                    <h4>Useful Tools</h4>
+                    <i class="fa-solid fa-chevron-down footer-chevron"></i>
+                </summary>
+                <div class="footer-links-list">
+                    <div class="tax-calculator"><i class="fa-solid fa-calculator"></i><a href="#">Tax Calculator</a></div>
+                    <div class="compound-interest"><i class="fa-solid fa-money-bill-trend-up"></i><a href="#">Compound Interest Calculator</a></div>
+                    <div class="credit-debts"><i class="fa-regular fa-credit-card"></i><a href="#">Credit Card & Debts Simulator</a></div>
+                    <div class="budget-tool"><i class="fa-solid fa-sack-dollar"></i><a href="#">Budget Tool</a></div>
+                </div>
+            </details>
+
+            <div class="footer-bottom-row">
+                <div class="stay-connect">
+                    <h4>Stay Connected</h4>
+                    <div class="message-box"><i class="fa-solid fa-paper-plane"></i><a href="#">Message Box</a></div>
+                    <div class="email"><i class="fa-solid fa-envelope"></i><p>moneymatters@gmail.com</p></div>
+                </div>
+
+                <div class="social-media">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 MoneyMatters by Hubert Kwan. All right reserved | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+            <details class="media-attributions">
+            <summary>Media Attributions</summary>
+        </details>
+        </div>
+    </footer>
+
+    
+    <script>
+        const searchContainer = document.getElementById('searchContainer');
+        const searchToggleBtn = document.getElementById('searchToggleBtn');
+        const searchInput = searchContainer.querySelector('.expandable-search-input');
+
+        // Toggle expand on button click
+        searchToggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            searchContainer.classList.toggle('active');
+            if (searchContainer.classList.contains('active')) {
+                searchInput.focus();
+            }
+        });
+
+        // Close input when clicking outside the container
+        document.addEventListener('click', (e) => {
+            if (!searchContainer.contains(e.target)) {
+                searchContainer.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

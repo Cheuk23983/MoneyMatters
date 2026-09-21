@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Money Management for students">
+    <meta name="keywords" content="money management">
+    <meta name="author" content="Hubert Kwan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f98f8eda6d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>MoneyMatters | Budgeting & Traps</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="nav-wrapper">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="images/logo-cropped.svg" alt="MoneyMatters Logo">
+                    </a>
+                </div>
+
+                <div class="search-container" id="searchContainer">
+                    <input type="text" class="expandable-search-input" placeholder="Search...">
+                    <button class="search-icon-btn" id="searchToggleBtn" aria-label="Toggle Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger-btn" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+
+                <div class="nav-links">
+                    <div class="home">
+                        <i class="fa-solid fa-house"></i>
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="earning-tax">
+                        <i class="fa-solid fa-wallet"></i>
+                        <a href="earning_tax.html">Earning & Taxes</a>
+                    </div>
+                    <div class="saving-invest">
+                        <i class="fa-solid fa-piggy-bank"></i>
+                        <a href="saving_invest.html">Saving & Investment</a>
+                    </div>
+                    <div class="budgeting-traps">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                        <a href="budgeting_traps.html" class="active">Budgeting & Traps</a>
+                    </div>
+                    <div class="support-hub">
+                        <i class="fa-solid fa-headset"></i>
+                        <a href="support_hub.html">Support Hub</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="hero-banner budgeting">
+        <div class="banner-container">
+            <div class="hero-left">
+                <div class="hero-content">
+                    <h1>Budgeting & Traps</h1>
+                    <p>Being able to manage money is not just about saving. It is also about making decisions about what to spend, understanding borrowing, and recognising situations that can make debt grow.</p>
+                </div>
+            </div>
+            <div class="hero-right budget">
+                <img src="images/budget_banner.png" alt="A man holding a ipad and think of money management">
+            </div>
+        </div>
+    </section>
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progressBar">
+            <a href="#needs-wants-section" class="nav-tab active budgeting-nav">Needs vs Wants Budget Tool</a>
+            <a href="#credit-debts-section" class="nav-tab budgeting-nav">Avoiding Credit & Debt Traps</a>
+            <a href="#debts-growth-simulator-section" class="nav-tab budgeting-nav">Debt Growth Simulator</a>
+        </div>
+    </div>
+
+    <main class="container">
+        <section id="#needs-wants-section" class="content-section">
+            <div class="section-heading">
+                <h2>Needs vs Wants</h2>
+            </div>
+            <div class="needs-wants-container">
+                <div class="nw-card">
+                    <h3 class=" nw-red">What is a need?</h3>
+                    <div class="nw-card-content">
+                        <p>A need is something important for your basic living or responsibilities. Which we call <strong>“necessity”</strong>.</p>
+
+                        <div class="example-list">
+                            <p><strong>Example of necessity:</strong></p>
+                            <ul>
+                                <li>Daily Food</li>
+                                <li>Transport to school or work</li>
+                                <li>Essential clothing</li>
+                                <li>Mobile data for work or contact</li>
+                                <li>Rental or accommodation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nw-card">
+                    <h3 class=" nw-green">What is a want?</h3>
+                    <div class="nw-card-content">
+                        <p>A want is something you would like to have but could live without them.</p>
+
+                        <div class="example-list">
+                            <p><strong>Example of Desire:</strong></p>
+                            <ul>
+                                <li>Dining Out</li>
+                                <li>New games</li>
+                                <li>Entertainments</li>
+                                <li>Subscriptions (music premium)</li>
+                                <li>New clothes while current clothes still works.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nw-card">
+                    <h3 class=" nw-blue">Why difference matter?</h3>
+                    <div class="nw-card-content">
+                        <p>Having the correct concept of the difference between needs and wants can help you decide where your money should go first.</p>
+
+                        <div class="example-list">
+                            <p><strong>Remember,</strong></p>
+                            <p>Wanting things that you desire is bad. The important question is <strong>“Can you afford this after taking care of all your necessities”</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="budget-tool-section" class="content-section">
+            <div class="section-heading">
+                <h2>Budget Tool</h2>
+            </div>
+            <div class="calculator-container">
+                <div class="calc-card calc-form">
+                    <div class="form-group">
+                        <label for="totalTakeHome">Monthly Income:</label>
+                        <input type="number" id="totalTakeHome" min="0">
+                    </div>
+
+                    <span class="heading">Enter Your Monthly Spending:</span>
+
+                    <div class="budget-inputs-grid">
+                        <div class="budget-col">
+                            <div class="input-needs">
+                                <h4 class="text-red">Needs</h4>
+                                <div class="form-group">
+                                    <label for="needRent">Rent</label>
+                                    <input type="number" id="needRent" min="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="needFood">Food</label>
+                                    <input type="number" id="needFood" min="0">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="needTransport">Transport</label>
+                                    <input type="number" id="needTransport" min="0">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="needPhone">Phone</label>
+                                    <input type="number" id="needPhone" min="0">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="needOthers">Others</label>
+                                    <input type="number" id="needOthers" placeholder="e.g., Insurance" min="0">
+                                </div>
+                            </div>
+
+                            <div class="input-wants">
+                                <h4 class="text-green">Wants</h4>
+
+                                <div class="form-group">
+                                    <label for="wantEntertainment">Entertainment</label>
+                                    <input type="number" id="wantEntertainment" min="0">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="wantTakeout">Takeout / Dining out</label>
+                                    <input type="number" id="wantTakeout" min="0">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="wantShopping">Shopping</label>
+                                    <input type="number" id="wantShopping" min="0">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="wantSubscriptions">Subscriptions</label>
+                                    <input type="number" id="wantSubscriptions" min="0">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="wantOthers">Others</label>
+                                    <input type="number" id="wantOthers" min="0">
+                                </div>
+                            </div>
+                        </div>
+
+                            
+
+                        <div class="budget-bottom-row">
+                            <h4 class="text-blue">Savings</h4>
+
+                            <div class="form-group">
+                                <label for="savingGoal">Saving Goal:</label>
+                                <input type="number" id="savingGoal" min="0">
+                            </div>
+                        </div>
+                        <button type="button" class="calc-btn budget" id="budgetCalculateBtn">Calculate My Budget</button>
+                    </div>
+                </div>
+
+                <div class="calc-swap-icon budget">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+
+                <div class="calc-card calc-results budget">
+                    <h3>Your Budget Summary,</h3>
+                    
+                    <div class="result-row">
+                        <span>Total income</span>
+                        <strong id="outBudgetIncome">$0.00/mth</strong>
+                    </div>
+
+                    <div class="result-row">
+                        <span>Needs</span>
+                        <strong id="outBudgetNeeds">$0.00/mth</strong>
+                    </div>
+
+                    <div class="result-row">
+                        <span>Wants</span>
+                        <strong id="outBudgetWants">$0.00/mth</strong>
+                    </div>
+
+                    <div class="result-row">
+                        <span>Savings</span>
+                        <strong id="outBudgetSavings">$0.00/mth</strong>
+                    </div>
+
+                    <div class="result-row total-result">
+                        <span>Money remaining</span>
+                        <strong id="outBudgetLeftover">$0.00/mth</strong>
+                    </div>
+
+                    <div class="chart-box">
+                        <canvas id="budgetDoughnutChart"></canvas>
+                    </div>
+
+                    <div class="calc-tips">
+                        <i class="fa-solid fa-lightbulb icon-stroke"></i>
+                        <div class="calc-tips-content">
+                            <p class="heading">Does your result look balanced?</p>
+                            <ul>
+                                <li>A popular budget rule is <strong>50/30/20</strong>: <span class="text-red">50% Needs</span>, <span class="text-green">30% Wants</span>, and <span class="text-blue">20% Savings</span>.</li>
+                                <li>If your needs or wants are too high, try reducing optional spending to leave more for savings.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="credit-debts-section" class="content-section">
+            <div class="section-heading">
+                <h2>Avoiding Credits card & Debt Traps</h2>
+                <p>A credit card lets you spend money borrowed from the card provider. You normally need to repay what you spend, and interest may be charged if you do not pay the balance in full.</p>
+            </div>
+
+            <div class="credit-debts-container">
+                <div class="debts-card">
+                    <h3 class=" debts-yellow">Key things to Know</h3>
+                    <div class="debts-list">
+                        <div class="list-item">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <div class="debts-content">
+                                <h4>Credit is borrow money</h4>
+                                <p>The money you spend is not automatically yours.</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <div class="debts-content">
+                                <h4>Extra interest costs</h4>
+                                <p>Carrying a balance can make something cost more than its original price.</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <div class="debts-content">
+                                <h4>Misleading minimum payments</h4>
+                                <p>Paying only the minimum can take much longer to clear a balance.</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <div class="debts-content">
+                                <h4>Credit limit ≠ Your budget</h4>
+                                <p>Just because you can borrow a certain amount does not mean you should spend it.</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <div class="debts-content">
+                                <h4>Buy-Now-Pay-later is still a borrowing</h4>
+                                <p>Splitting a payment into smaller amounts does not make the purchase free.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="debts-card">
+                    <h3 class=" debts-red">Be careful of these traps</h3>
+                    <div class="debts-list">
+                        <div class="list-item">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <div class="debts-content">
+                                <h4>“Buy now, pay later” (BNPL)</h4>
+                                <p><strong>BNPL</strong> can make an expensive purchase seem affordable. But having multiple <strong>BNPL</strong> payments can the bills  difficult to track.</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <div class="debts-content">
+                                <h4>Minimum credit card payments</h4>
+                                <p>Paying only the minimum can leave a balance unpaid for a long time, especially when interest is being included.</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <div class="debts-content">
+                                <h4>Impulse spending</h4>
+                                <p>A limited-time sale or “special offer” can encourage you to buy something you did not plan to get.</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <div class="debts-content">
+                                <h4>Borrowing to repay borrowing</h4>
+                                <p>Using one form of debt to cover another, you will trapped in a loop cycle to repay your loan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="debts-card">
+                    <h3 class=" debts-blue">Read the fine print</h3>
+                    <div class="debts-list">
+                        <div class="list-item">
+                            <i class="fa-solid fa-eye"></i>
+                            <div class="debts-content">
+                                <h4>Check the fees</h4>
+                                <p>Look for account fees, late fees, or other extra charges.</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <i class="fa-solid fa-eye"></i>
+                            <div class="debts-content">
+                                <h4>Check the interest rate</h4>
+                                <p>A higher interest rate can make borrowed money much more expensive.</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <i class="fa-solid fa-eye"></i>
+                            <div class="debts-content">
+                                <h4>Check the total cost</h4>
+                                <p>Don’t focus only on the weekly or monthly payment.</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <i class="fa-solid fa-eye"></i>
+                            <div class="debts-content">
+                                <h4>Check for missing payments</h4>
+                                <p>Late payments may lead to additional costs or other consequences which will add up the debts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="debts-card">
+                    <h3 class=" debts-green">How to stay safe</h3>
+                    <div class="debts-list">
+                        <div class="list-item">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <div class="debts-content">
+                                <h4>Check your budget first</h4>
+                                <p>Make sure the payment fits comfortably within your regular income and expenses.</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <div class="debts-content">
+                                <h4>Ask yourself do you really need</h4>
+                                <p>Wait before making a large or impulse purchase. Give yourself time to decide.</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <div class="debts-content">
+                                <h4>Avoid taking multiple payments</h4>
+                                <p>Several small repayments can quickly add up.</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <div class="debts-content">
+                                <h4>Get help if you are struggling</h4>
+                                <p>If you are having trouble managing money, talk to a trusted adult or financial support team.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="debts-growth-simulator-section" class="content-section">
+            <div class="section-heading">
+                <h2>Debt Growth Simulator</h2>
+                <p>When you borrow money, interest can increase the amount you owe. The longer debt remains unpaid, the more interest may accumulate. This is why understanding repayment amounts and interest rates is important.</p>
+            </div>
+
+            <div class="calculator-container">
+                <!-- Inputs Card -->
+                <div class="calc-card calc-form">
+                    <div class="form-group">
+                        <label for="startingDebts">Starting debt:</label>
+                        <input type="number" id="startingDebts" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interestRate">Interest rate:</label>
+                        <input type="number" id="interestRate" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="monthlyRepayment">Monthly repayment:</label>
+                        <input type="number" id="monthlyRepayment" min="0">
+                    </div>
+
+                    <button type="button" class="calc-btn" id="calculateDebtsBtn">Calculate debts</button>
+
+                    <div class="calc-disclaimer">
+                        <i class="fa-solid fa-lightbulb icon-stroke"></i>
+                        <p>This simulator is a simplified educational example. Real credit products can have different interest calculations, fee, minimum repayments and conditions.</p>
+                    </div>
+
+                    <div class="calc-disclaimer">
+                        <i class="fa-solid fa-lightbulb icon-stroke"></i>
+                        <p>If you find any field that you are confuse about what is it about, don’t worry. Just try to explore by putting random number, and you will find it out. The more you try, the deeper you will understand.</p>
+                    </div>
+                </div>
+
+                <div class="calc-swap-icon">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+
+                <div class="calc-card calc-results debt-results">
+                    <h3 class="results-heading-green">Your Results</h3>
+                    
+                    <div class="result-row">
+                        <span>Estimated time to repay</span>
+                        <strong id="outDebtRepayTime">$xxxx.xx</strong>
+                    </div>
+
+                    <div class="result-row">
+                        <span>Estimated total paid</span>
+                        <strong id="outDebtTotalPaid">$xxxx.xx</strong>
+                    </div>
+
+                    <div class="result-row">
+                        <span>Estimated interest</span>
+                        <strong id="outDebtInterest">$xxxx.xx</strong>
+                    </div>
+
+                    <h4 class="diagram-heading">Estimated Debt growth diagram</h4>
+
+                    <!-- Line Chart Canvas Container -->
+                    <div class="chart-box debt-chart-box">
+                        <canvas id="debtGrowthChart"></canvas>
+                    </div>
+
+                    <!-- Insight Tip -->
+                    <div class="calc-tips">
+                        <i class="fa-solid fa-lightbulb icon-stroke"></i>
+                        <div class="calc-tips-content">
+                            <p class="heading">What happens if you:</p>
+                            <ul>
+                                <li>
+                                    <strong>Increase the repayment?</strong>
+                                    <p>Your debt may be paid off sooner and you may pay less interest overall.</p>
+                                </li>
+                                <li>
+                                    <strong>Decrease the repayment?</strong>
+                                    <p>It may take longer to repay the debt, and more interest may accumulate.</p>
+                                </li>
+                                <li>
+                                    <strong>Increase the interest rate?</strong>
+                                    <p>The cost of borrowing may increase.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-container">
+        <div class="footer-logo">
+            <img class="footer-logo-img" src="images/footer_logo.png" alt="MoneyMatters Logo">
+            <img class="graduate-img" src="images/graduate.png" alt="Graduate Cap Graphic">
+        </div>
+
+        <div class="footer-sections-row">
+            <details class="site-map footer-details">
+                <summary class="footer-summary">
+                    <h4>Helpful Guides</h4>
+                    <i class="fa-solid fa-chevron-down footer-chevron"></i>
+                </summary>
+                <div class="footer-links-list">
+                    <div class="home"><i class="fa-solid fa-house"></i><a href="index.html" class="active">Home</a></div>
+                    <div class="earning_tax"><i class="fa-solid fa-wallet"></i><a href="earning_tax.html">Earning & Taxes</a></div>
+                    <div class="saving_invest"><i class="fa-solid fa-piggy-bank"></i><a href="saving_invest.html">Saving & Investment</a></div>
+                    <div class="budgeting_traps"><i class="fa-solid fa-scale-balanced"></i><a href="budgeting_traps.html">Budgeting & Traps</a></div>
+                    <div class="support_hub"><i class="fa-solid fa-headset"></i><a href="support_hub.html">Support Hub</a></div>
+                </div>
+            </details>
+
+            <details class="tool-map footer-details">
+                <summary class="footer-summary">
+                    <h4>Useful Tools</h4>
+                    <i class="fa-solid fa-chevron-down footer-chevron"></i>
+                </summary>
+                <div class="footer-links-list">
+                    <div class="tax-calculator"><i class="fa-solid fa-calculator"></i><a href="#">Tax Calculator</a></div>
+                    <div class="compound-interest"><i class="fa-solid fa-money-bill-trend-up"></i><a href="#">Compound Interest Calculator</a></div>
+                    <div class="credit-debts"><i class="fa-regular fa-credit-card"></i><a href="#">Credit Card & Debts Simulator</a></div>
+                    <div class="budget-tool"><i class="fa-solid fa-sack-dollar"></i><a href="#">Budget Tool</a></div>
+                </div>
+            </details>
+
+            <div class="footer-bottom-row">
+                <div class="stay-connect">
+                    <h4>Stay Connected</h4>
+                    <div class="message-box"><i class="fa-solid fa-paper-plane"></i><a href="#">Message Box</a></div>
+                    <div class="email"><i class="fa-solid fa-envelope"></i><p>moneymatters@gmail.com</p></div>
+                </div>
+
+                <div class="social-media">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 MoneyMatters by Hubert Kwan. All right reserved | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+            <details class="media-attributions">
+            <summary>Media Attributions</summary>
+        </details>
+        </div>
+    </footer>
+    <script>
+        const searchContainer = document.getElementById('searchContainer');
+        const searchToggleBtn = document.getElementById('searchToggleBtn');
+        const searchInput = searchContainer.querySelector('.expandable-search-input');
+
+        // Toggle expand on button click
+        searchToggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            searchContainer.classList.toggle('active');
+            if (searchContainer.classList.contains('active')) {
+                searchInput.focus();
+            }
+        });
+
+        // Close input when clicking outside the container
+        document.addEventListener('click', (e) => {
+            if (!searchContainer.contains(e.target)) {
+                searchContainer.classList.remove('active');
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
