@@ -405,28 +405,7 @@
             </details>
         </div>
     </footer>
-
-    <script>
-        const searchContainer = document.getElementById('searchContainer');
-        const searchToggleBtn = document.getElementById('searchToggleBtn');
-        const searchInput = searchContainer.querySelector('.expandable-search-input');
-
-        // Toggle expand on button click
-        searchToggleBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            searchContainer.classList.toggle('active');
-            if (searchContainer.classList.contains('active')) {
-                searchInput.focus();
-            }
-        });
-
-        // Close input when clicking outside the container
-        document.addEventListener('click', (e) => {
-            if (!searchContainer.contains(e.target)) {
-                searchContainer.classList.remove('active');
-            }
-        });
-    </script>
+    <script src="script.js"></script>
     
 </body>
 </html>

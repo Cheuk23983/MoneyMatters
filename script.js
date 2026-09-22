@@ -239,7 +239,163 @@ if (budgetBtn) {
     calculateBudget();
 }
 
-// --- 4. Paycheck Tax Calculator ---
+// --- 4. Debt Growth Simulator ---
+let debtChart = null;
+
+function calculateDebtGrowth() {
+    const debtInput = document.getElementById('startingDebts');
+    if (!debtInput) return;
+
+    const startingDebt = parseFloat(debtInput.value) || 0;
+    const annualRate = (parseFloat(document.getElementById('interestRate').value) || 0) / 100;
+    const monthlyRepayment = parseFloat(document.getElementById('monthlyRepayment').value) || 0;
+
+    const fmtCurrency = (value) => '$' + Number(value).toLocaleString('en-NZ', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+
+    const formatRepayTime = (months) => {
+        if (months <= 0) return '0 months';
+        const years = Math.floor(months / 12);
+        const remainingMonths = months % 12;
+
+        if (years === 0) return `${months} month${months === 1 ? '' : 's'}`;
+        if (remainingMonths === 0) return `${years} year${years === 1 ? '' : 's'}`;
+        return `${years} year${years === 1 ? '' : 's'}, ${remainingMonths} month${remainingMonths === 1 ? '' : 's'}`;
+    };
+
+    if (startingDebt <= 0) {
+        document.getElementById('outDebtRepayTime').textContent = '0 months';
+        document.getElementById('outDebtTotalPaid').textContent = '$0.00';
+        document.getElementById('outDebtInterest').textContent = '$0.00';
+
+        const chartCanvas = document.getElementById('debtGrowthChart');
+        if (chartCanvas && typeof Chart !== 'undefined') {
+            const ctx = chartCanvas.getContext('2d');
+            if (debtChart) debtChart.destroy();
+            debtChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Month 0'],
+                    datasets: [{
+                        label: 'Debt Balance',
+                        data: [0],
+                        borderColor: '#2563eb',
+                        backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                        tension: 0.3,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: (value) => '$' + Number(value).toLocaleString()
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        return;
+    }
+
+    let balance = startingDebt;
+    let totalPaid = 0;
+    let totalInterest = 0;
+    let months = 0;
+    const maxMonths = 600;
+    const labels = ['Month 0'];
+    const balances = [startingDebt];
+
+    while (balance > 0 && months < maxMonths) {
+        const interest = balance * (annualRate / 12);
+        balance += interest;
+        totalInterest += interest;
+
+        let repayment = monthlyRepayment;
+        if (repayment <= 0) {
+            repayment = 0;
+        }
+
+        if (repayment > 0) {
+            balance -= repayment;
+            totalPaid += repayment;
+        } else {
+            totalPaid += 0;
+        }
+
+        if (balance < 0) {
+            balance = 0;
+        }
+
+        months += 1;
+        labels.push(`Month ${months}`);
+        balances.push(balance);
+    }
+
+    if (balance > 0) {
+        document.getElementById('outDebtRepayTime').textContent = 'More than 50 years';
+    } else {
+            document.getElementById('outDebtRepayTime').textContent = formatRepayTime(months);
+    }
+
+    document.getElementById('outDebtTotalPaid').textContent = fmtCurrency(totalPaid);
+    document.getElementById('outDebtInterest').textContent = fmtCurrency(totalInterest);
+
+    const chartCanvas = document.getElementById('debtGrowthChart');
+    if (chartCanvas && typeof Chart !== 'undefined') {
+        const ctx = chartCanvas.getContext('2d');
+        if (debtChart) debtChart.destroy();
+
+        const sampledLabels = labels.length > 24 ? labels.filter((_, index) => index % Math.ceil(labels.length / 24) === 0 || index === labels.length - 1) : labels;
+        const sampledBalances = labels.length > 24 ? balances.filter((_, index) => index % Math.ceil(balances.length / 24) === 0 || index === balances.length - 1) : balances;
+
+        debtChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: sampledLabels,
+                datasets: [{
+                    label: 'Debt Balance',
+                    data: sampledBalances,
+                    borderColor: '#2563eb',
+                    backgroundColor: 'rgba(37, 99, 235, 0.08)',
+                    fill: true,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        ticks: {
+                            callback: (value) => '$' + Number(value).toLocaleString()
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    }
+}
+
+const debtBtn = document.getElementById('calculateDebtsBtn');
+if (debtBtn) {
+    debtBtn.addEventListener('click', calculateDebtGrowth);
+    calculateDebtGrowth();
+}
+
+// --- 5. Paycheck Tax Calculator ---
 function calculateNZIncomeTax(annualIncome) {
     let tax = 0;
 
@@ -352,8 +508,47 @@ function setupPaycheckCalculator() {
     runPaycheckCalculator();
 }
 
+
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', setupPaycheckCalculator);
 } else {
     setupPaycheckCalculator();
+}
+
+function syncFooterDetailsState() {
+    const footerDetails = document.querySelectorAll('.site-map.footer-details, .tool-map.footer-details');
+    if (!footerDetails.length) return;
+
+    const isDesktop = window.innerWidth >= 1024;
+
+    footerDetails.forEach((detail) => {
+        detail.open = isDesktop;
+    });
+}
+
+window.addEventListener('resize', syncFooterDetailsState);
+window.addEventListener('DOMContentLoaded', syncFooterDetailsState);
+syncFooterDetailsState();
+
+
+const searchContainer = document.getElementById('searchContainer');
+const searchToggleBtn = document.getElementById('searchToggleBtn');
+
+if (searchContainer && searchToggleBtn) {
+    const searchInput = searchContainer.querySelector('.expandable-search-input');
+
+    searchToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        searchContainer.classList.toggle('active');
+
+        if (searchContainer.classList.contains('active') && searchInput) {
+            searchInput.focus();
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!searchContainer.contains(e.target)) {
+            searchContainer.classList.remove('active');
+        }
+    });
 }

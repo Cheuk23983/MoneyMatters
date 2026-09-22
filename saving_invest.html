@@ -230,6 +230,13 @@
                     </div>
 
                     <button type="button" class="calc-btn" id="ciCalculateBtn">Calculate Growth</button>
+
+                    <!-- <div class="calc-disclaimer">
+                        <div class="disclaimer-top">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <p>This calculator is for educational estimate. For an official calculation, check IRD web page.</p>
+                        </div>
+                    </div> -->
                 </div>
 
                 <div class="calc-swap-icon">
@@ -415,7 +422,7 @@
             <div class="footer-bottom-row">
                 <div class="stay-connect">
                     <h4>Stay Connected</h4>
-                    <div class="message-box"><i class="fa-solid fa-paper-plane"></i><a href="#">Message Box</a></div>
+                    <div class="message-box-footer"><i class="fa-solid fa-paper-plane"></i><a href="#">Message Box</a></div>
                     <div class="email"><i class="fa-solid fa-envelope"></i><p>moneymatters@gmail.com</p></div>
                 </div>
 
@@ -434,31 +441,13 @@
         <div class="copyright">
             &copy; 2026 MoneyMatters by Hubert Kwan. All right reserved | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
             <details class="media-attributions">
-            <summary>Media Attributions</summary>
-        </details>
+                <summary>
+                    <span>Media Attributions</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+            </details>
         </div>
     </footer>
-    <script>
-        const searchContainer = document.getElementById('searchContainer');
-        const searchToggleBtn = document.getElementById('searchToggleBtn');
-        const searchInput = searchContainer.querySelector('.expandable-search-input');
-
-        // Toggle expand on button click
-        searchToggleBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            searchContainer.classList.toggle('active');
-            if (searchContainer.classList.contains('active')) {
-                searchInput.focus();
-            }
-        });
-
-        // Close input when clicking outside the container
-        document.addEventListener('click', (e) => {
-            if (!searchContainer.contains(e.target)) {
-                searchContainer.classList.remove('active');
-            }
-        });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>

@@ -432,18 +432,36 @@ header {
 .payslip-table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
     /* margin-bottom: 0.75rem; */
 }
 
 .payslip-table th, 
 .payslip-table td {
     text-align: left;
-    padding: 0.3rem 0;
+    padding: 0.3rem 0.35rem;
     font-size: 0.8rem;
+    vertical-align: middle;
 }
 
-.payslip-table th:last-child, 
-.payslip-table td:last-child {
+.payslip-table th:nth-child(1),
+.payslip-table td:nth-child(1) {
+    width: 45%;
+}
+
+.payslip-table th:nth-child(2),
+.payslip-table td:nth-child(2) {
+    width: 20%;
+}
+
+.payslip-table th:nth-child(3),
+.payslip-table td:nth-child(3) {
+    width: 15%;
+}
+
+.payslip-table th:nth-child(4),
+.payslip-table td:nth-child(4) {
+    width: 20%;
     text-align: right;
 }
 
@@ -476,6 +494,8 @@ header {
 .payslip-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     width: 95%;
     margin: 0 auto;
@@ -625,7 +645,7 @@ header {
     background-color: #d1e7fd;
     border-radius: 15px;
     margin-top: 4rem;
-    padding: 1rem;
+    padding: 1rem 1rem 0;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -758,7 +778,7 @@ header {
     margin: 0 -1rem;
     padding: 0 1rem;
     padding-top: 0.5rem;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.5rem;
     text-align: center;
     font-size: 0.8rem;
     color: #000000;
@@ -777,10 +797,6 @@ header {
 
 .media-attributions summary::-webkit-details-marker {
     display: none;
-}
-
-.media-attributions summary::after {
-    content: " >";
 }
 
 /* Earning & taxes page */
@@ -833,7 +849,7 @@ header {
 }
 
 .section-heading p {
-    font-size: 0.9rem;
+    font-size: clamp(15px, 1.5vw, 22px);
     color: black;
 }
 
@@ -886,8 +902,8 @@ header {
 .payslip-table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
     /* margin-bottom: 0.75rem; */
-    /* table-layout: fixed; */
 }
 
 .payslip-table th, 
@@ -930,6 +946,19 @@ header {
     font-size: 0.75rem;
 }
 
+.payslip-table .total-row td,
+.payslip-table .deductions-total td,
+.payslip-table .take-home-pay td {
+    text-align: left;
+}
+
+.payslip-table .total-row td:last-child,
+.payslip-table .deductions-total td:last-child,
+.payslip-table .take-home-pay td:last-child,
+.payslip-table td.col-total {
+    text-align: right;
+}
+
 .payslip-table .total-row td {
     font-weight: 700;
     color: #009024;
@@ -954,13 +983,15 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 15px;
-    height: 15px;
+    width: 1.5em;
+    min-width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
     border: 1px solid black;
     color: black;
     font-weight: 500;
     margin-left: 0.3rem;
+    /* flex-shrink: 0; */
 }
 
 .payslip-explanations-container {
@@ -977,19 +1008,17 @@ header {
 .explanation-card {
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
+    align-items: flex-start;
+    gap: 1rem;
 }
 
-.explanation-num {
-    width: 2rem;
-    margin: 0;
-    padding: 0.6rem 0.3rem;
-}
 
 .explanation-card-content {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    flex: 1;
+    min-width: 0;
 }
 
 .explanation-card-content .text-green {
@@ -1188,11 +1217,24 @@ header {
 
 .total-result {
     border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-bottom: none;
     font-size: 0.9rem;
     font-weight: 500;
     margin-top: 0.4rem;
     padding-top: 0.6rem;
+}
+
+#compound-interest-section .calc-results .total-result {
+    border: none;
+    margin: 0;
+    /* padding: 0; */
+}
+
+#compound-interest-section .chart-box {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    /* border-radius: 10px; */
+    background-color: #F7F8FC;
 }
 
 .calc-results.saving-goal {
@@ -1216,16 +1258,22 @@ header {
 
 .calc-results.saving-goal .result-row {
     align-items: center;
-    /* border-bottom: 1px solid rgba(0, 0, 0, 0.9); */
     color: #000000;
     font-size: 0.8rem;
-    padding: 0.6rem 0;
+    /* padding: 0.6rem 0; */
 }
 
 .calc-results.saving-goal .result-row strong {
     color: #000000;
     font-size: 0.82rem;
     font-weight: 700;
+}
+
+.calc-results.saving-goal .total-result {
+    border: none;
+    border-bottom: 1px solid #000000;
+    margin: 0;
+    padding-bottom: 0.6rem;
 }
 /* 
 .calc-results.saving-goal .total-result {
@@ -1429,6 +1477,15 @@ header {
     font-size: clamp(20px, 1vw, 30px);
 }
 
+.ba-card.expand .ba-card-content {
+    padding: 0 1rem 1rem;
+}
+
+.ba-card.expand .ba-card-content > h4 {
+    margin: 0.25rem 0 0.75rem;
+    font-size: clamp(1.2rem, 1.4vw, 1.7rem);
+}
+
 .expand .example-list {
     display: flex;
     flex-direction: column;
@@ -1438,7 +1495,7 @@ header {
 .question {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 0.35rem;
 }
 
 .question .heading {
@@ -1556,14 +1613,21 @@ header {
     gap: 1.25rem;
     margin-top: 0.5rem;
     width: 100%;
+    max-width: 100%;
 }
 
 .budget-col {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    align-items: start;
     width: 100%;
+}
+
+.input-needs,
+.input-wants {
+    width: 100%;
+    min-width: 0;
 }
 
 .budget-col h4,
@@ -1609,6 +1673,7 @@ header {
     background-color: #F7F8FC;
     /* box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.05); */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -1813,6 +1878,7 @@ header {
 .jargon-item {
     border: 1px solid #cbd5e1;
     box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.229);
+    background-color: white;
     padding: 1rem;
     border-radius: 15px;
     display: flex;
@@ -1987,6 +2053,14 @@ header {
         display: none;
     }
 
+    .nav-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
     .nav-links {
         order: 2;
         display: flex;
@@ -1998,6 +2072,10 @@ header {
         margin-top: 0;
         border-top: none;
         background: transparent;
+        position: relative;
+        z-index: 1;
+        flex: 1;
+        justify-content: center;
     }
 
     .home, 
@@ -2008,6 +2086,7 @@ header {
         flex-direction: column;
         row-gap: 0.5rem;
         text-align: center;
+        width: auto;
     }
 
     .fa-house,
@@ -2029,13 +2108,17 @@ header {
         position: relative;
         display: flex;
         align-items: center;
-        padding-left: 1rem;
+        margin: 0;
+        z-index: 2;
+        pointer-events: auto;
+        flex-shrink: 0;
     }
 
     .search-icon-btn {
         width: 60px;
         height: 60px;
-
+        position: relative;
+        z-index: 3;
     }
 
     .search-icon-btn:hover {
@@ -2044,17 +2127,22 @@ header {
     }
 
     .expandable-search-input {
-        border-radius: 20px;
+        border-radius: 30px;
     }
 
     .search-container.active .expandable-search-input {
         order: 1;
-        width: 220px;
-        height: 3rem;
+        width: 250px;
+        height: 3.8rem;
+        z-index: 4;
+        pointer-events: auto;
+        position: absolute;
+        right: 0;
     }
 
     .search-container.active .search-icon-btn {
         background: rgba(255, 255, 255, 0.9);
+        z-index: 5;
     }
 
     .hero-banner {
@@ -2176,6 +2264,8 @@ header {
         padding: 2rem;
         line-height: 1.8rem;
         font-size: clamp(20px, 1vw, 30px);
+        justify-content: center;
+        align-items: center;
     }
 
     .payslip-content a {
@@ -2462,6 +2552,34 @@ header {
 
     .ba-card.expand {
         grid-column: span 3;
+    }
+
+    .ba-card.expand .ba-card-content {
+        padding: 0 1rem 1rem;
+    }
+
+    .expand .example-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.2rem 2rem;
+        width: 100%;
+    }
+
+    .question {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .question .heading {
+        font-weight: 600;
+        line-height: 1.35;
+    }
+
+    .question .answer {
+        margin-left: 3%;
+        line-height: 1.45;
+        color: #111827;
     }
 
 
