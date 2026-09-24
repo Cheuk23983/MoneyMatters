@@ -166,6 +166,8 @@ header {
     transition: color 0.2s ease;
 }
 
+
+/* hover animation */
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--color-primary-accent);
@@ -246,6 +248,7 @@ header {
     transform: translateY(0);
 }
 
+/* hover animation */
 .back-to-top-btn:hover {
     background: rgba(250, 251, 251, 0.074);
     backdrop-filter: blur(3px) saturate(90%);
@@ -412,6 +415,7 @@ header {
     padding-top: 0.75rem;
 }
 
+/* hover animation */
 .footer-links-list div:hover,
 .stay-connect div:hover {
     transform: scale(1.05);
@@ -547,6 +551,7 @@ header {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/* hover animation */
 .progress-bar .nav-tab:hover {
     background-color: var(--color-panel-strong);
     color: var(--color-text-soft);
@@ -618,6 +623,7 @@ header {
     color: var(--color-text);
 }
 
+/* hover animation */
 .calc-btn:hover,
 .ird-btn:hover {
     transform: scale(1.05);
@@ -794,6 +800,13 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* hover animation */
+.hero-btns a:hover,
+.hero-btns button:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
 /* situation cards */
 .situation-cards {
     display: flex;
@@ -865,6 +878,7 @@ header {
     justify-content: center;
 }
 
+/* hover animation */
 .tool-card:hover,
 .situation-card:hover {
     transform: scale(1.05);
@@ -1016,6 +1030,12 @@ header {
     align-self: center;
 }
 
+/* hover animation */
+.payslip-content a:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 /* translator & FAQ section */
 .translator-faqs-section {
     display: flex;
@@ -1083,6 +1103,8 @@ header {
     cursor: pointer;
 }
 
+
+/* hover animation */
 .pill:hover {
     transform: scale(1.1);
 }
@@ -1096,6 +1118,12 @@ header {
     font-weight: 700;
     color: var(--color-text-soft);
     text-decoration: none;
+}
+
+.card-footer-link:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+    color: var(--color-primary-accent);
 }
 
 /* faq list */
@@ -1392,6 +1420,7 @@ header {
     justify-self: center;
 }
 
+/* hover animation */
 .progress-bar .saving-nav:hover {
     background-color: var(--color-red-soft);
 }
@@ -1586,6 +1615,7 @@ header {
     width: 100%;
 }
 
+/* hover animation */
 .progress-bar .budgeting-nav:hover {
     background-color: var(--color-yellow-soft);
 }
@@ -1718,6 +1748,8 @@ header {
     background-color: var(--color-success-soft);
 }
 
+
+/* hover animation */
 .progress-bar .support-nav:hover {
     background-color: var(--color-success-soft);
     color: var(--color-text-soft);
@@ -2048,6 +2080,7 @@ header {
         transition: color 0.2s ease, transform 0.2s ease;
     }
 
+    /* hover animation */
     .nav-links a:hover {
         transform: scale(1.1);
         transition: transform 0.5s ease;
@@ -2071,6 +2104,8 @@ header {
         z-index: 3;
     }
 
+    
+    /* hover animation */   
     .search-icon-btn:hover {
         background: rgba(255, 255, 255, 0.9);
         transform: scale(1.05);
@@ -2405,7 +2440,8 @@ header {
         line-height: 1.3;
         transition: color 0.2s ease;
     }
-
+    
+/* hover animation */
     .site-map a:hover,
     .tool-map a:hover,
     .stay-connect a:hover {
