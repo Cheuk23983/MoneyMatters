@@ -2,24 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Money Management for students">
-    <meta name="keywords" content="money management">
+    <meta name="description" content="Explore saving, bank accounts, compound interest, and beginner investment ideas to help students grow money wisely.">
+    <meta name="keywords" content="saving money, compound interest, investment, bank account, financial planning, student savings, wealth building">
     <meta name="author" content="Hubert Kwan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f98f8eda6d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>MoneyMatters | Earning & Taxes</title>
+    <title>MoneyMatters | Saving & Investment</title>
 </head>
 <body>
+    <!-- header section -->
     <header>
+        <!-- navigation bar -->
         <nav class="nav-container">
             <div class="nav-wrapper">
                 <div class="nav-logo">
                     <a href="index.html">
-                        <img src="images/logo-cropped.svg" alt="MoneyMatters Logo">
+                        <img src="images/logo-cropped.svg" alt="MoneyMatters logo">
                     </a>
                 </div>
 
+                <!-- search bar -->
                 <div class="search-container" id="searchContainer">
                     <input type="text" class="expandable-search-input" placeholder="Search...">
                     <button class="search-icon-btn" id="searchToggleBtn" aria-label="Toggle Search">
@@ -27,36 +30,39 @@
                     </button>
                 </div>
 
-                <input type="checkbox" id="menu-toggle">
-                <label for="menu-toggle" class="hamburger-btn" aria-label="Toggle Navigation">
+                <!-- burger menu icon -->
+                <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
+                <label for="menu-toggle" class="hamburger-btn">
                     <i class="fa-solid fa-bars"></i>
                 </label>
 
+                <!-- nav links -->
                 <div class="nav-links">
-                    <div class="home">
+                    <a href="index.html" class="home">
                         <i class="fa-solid fa-house"></i>
-                        <a href="index.html">Home</a>
-                    </div>
-                    <div class="earning-tax">
+                        <span>Home</span>
+                    </a>
+                    <a href="earning_tax.html" class="earning-tax">
                         <i class="fa-solid fa-wallet"></i>
-                        <a href="earning_tax.html">Earning & Taxes</a>
-                    </div>
-                    <div class="saving-invest">
+                        <span>Earning & Taxes</span>
+                    </a>
+                    <a href="saving_invest.html" class="active saving-invest">
                         <i class="fa-solid fa-piggy-bank"></i>
-                        <a href="saving_invest.html" class="active">Saving & Investment</a>
-                    </div>
-                    <div class="budgeting-traps">
+                        <span>Saving & Investment</span>
+                    </a>
+                    <a href="budgeting_traps.html" class="budgeting-traps">
                         <i class="fa-solid fa-scale-balanced"></i>
-                        <a href="budgeting_traps.html">Budgeting & Traps</a>
-                    </div>
-                    <div class="support-hub">
+                        <span>Budgeting & Traps</span>
+                    </a>
+                    <a href="support_hub.html" class="support-hub">
                         <i class="fa-solid fa-headset"></i>
-                        <a href="support_hub.html">Support Hub</a>
-                    </div>
+                        <span>Support Hub</span>
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
+    <!-- hero banner section -->
     <section class="hero-banner saving">
         <div class="banner-container">
             <div class="hero-left">
@@ -66,19 +72,22 @@
                 </div>
             </div>
             <div class="hero-right">
-                <img src="images/saving_banner.png" alt="A man holding a ipad and think of money management">
+                <img src="images/saving_banner.png" alt="Illustration of a person reviewing money planning on a tablet">
             </div>
         </div>
     </section>
+    <!-- progress bar section -->
     <div class="progress-bar-container">
         <div class="progress-bar" id="progressBar">
-            <a href="#bank-account-section" class="nav-tab active saving-nav">Bank Account</a>
+            <a href="#bank-account-section" class="nav-tab saving-nav">Bank Account</a>
             <a href="#compound-interest-section" class="nav-tab saving-nav">Compound Interest Growth</a>
-            <a href="#Saving-goal-section" class="nav-tab saving-nav">Saving Goal Planner</a>
+            <a href="#saving-goal-section" class="nav-tab saving-nav">Saving Goal Planner</a>
         </div>
     </div>
     
+    <!-- main section -->
     <main class="container">
+        <!-- bank account section -->
         <section id="#bank-account-section" class="content-section">
             <div class="section-heading">
                 <h2>Setting Up a Bank Account</h2>
@@ -86,8 +95,9 @@
             </div>
 
             <div class="bank-account-container">
+                <!-- transaction account card -->
                 <div class="ba-card">
-                    <h3 class=" ba-blue">Everyday/Transaction Account</h3>
+                    <h3 class=" ba-blue">Transaction Account</h3>
                     <div class="ba-card-content">
                         <p>An everyday account is designed for regular spending.</p>
 
@@ -109,6 +119,7 @@
                 </div>
 
                 <div class="ba-card">
+                    <!-- saving account card -->
                     <h3 class=" ba-green">Savings Account</h3>
                     <div class="ba-card-content">
                         <p>A savings account is designed to help you keep money aside. Depending on the account, you may earn interest on your balance.</p>
@@ -128,6 +139,7 @@
                 </div>
 
                 <div class="ba-card">
+                    <!-- term deposit card -->
                     <h3 class=" ba-yellow">Term Deposit</h3>
                     <div class="ba-card-content">
                         <p>A term deposit allows you to place money with a bank for a fixed period. In return, you may receive an agreed interest rate.</p>
@@ -146,6 +158,7 @@
                 </div>
 
                 <div class="ba-card expand">
+                    <!-- Choice decision card -->
                     <h3 class=" ba-red">How Do I Choose?</h3>
                     <div class="ba-card-content">
                         <h4>Ask yourself:</h4>
@@ -170,24 +183,12 @@
                                 <p class="heading">5. Are there any conditions?</p>
                                 <p class="answer">Some accounts may have minimum balances or requirements.</p>
                             </div>
-                                <!-- <ol>
-                                    <li>What will I use the account for?</li>
-                                    <p>Spending, Saving for a goal, or long-term saving?</p>
-                                    <li>Can I access the money easily?</li>
-                                    <p>Some accounts are designed for frequent access while others may have conditions.</p>
-                                    <li>Does the account pay interest?</li>
-                                    <p>Compare the interest rate and conditions to be sure its what you want.</p>
-                                    <li>Are there any fees?</li>
-                                    <p>Check whether there are account, transaction, withdrawal, or other fees.</p>
-                                    <li>Are there any conditions?</li>
-                                    <p>Some accounts may have minimum balances or requirements.</p>
-                                </ol> -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Compound Interest Growth Section -->
+        <!-- compound interest section -->
         <section id="compound-interest-section" class="content-section">
             <div class="section-heading">
                 <h2>Compound Interest Growth</h2>
@@ -195,8 +196,8 @@
                 <p>Imagine you save <strong>$1,000</strong> and earn interest. At first, interest is calculated on your original <strong>$1,000</strong>. As interest is added to your account, future interest can also be earned on that added amount. This is why starting early can make a difference.</p>
             </div>
 
-            <h3>Compound Interest Calculator</h3>
             <div class="calculator-container">
+                <!-- input form -->
                 <div class="calc-card calc-form">
                     <p>Enter your numbers,</p>
                     <div class="form-group">
@@ -229,23 +230,19 @@
                         <input type="number" id="ciYears" placeholder="e.g. 10" min="1">
                     </div>
 
+                    <!-- calculate button -->
                     <button type="button" class="calc-btn" id="ciCalculateBtn">Calculate Growth</button>
-
-                    <!-- <div class="calc-disclaimer">
-                        <div class="disclaimer-top">
-                            <i class="fa-solid fa-lightbulb"></i>
-                            <p>This calculator is for educational estimate. For an official calculation, check IRD web page.</p>
-                        </div>
-                    </div> -->
                 </div>
 
+                <!-- convert icon -->
                 <div class="calc-swap-icon">
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
 
+                <!-- result card -->
                 <div class="calc-card calc-results">
                     <h3>Your Result</h3>
-                    
+                    <!-- result summary -->
                     <div class="result-row">
                         <span>Money Contributed</span>
                         <strong id="ciOutContributed">$0.00</strong>
@@ -261,11 +258,12 @@
                         <strong id="ciOutTotal">$0.00</strong>
                     </div>
 
+                    <!-- line diagram -->
                     <div class="chart-box">
                         <h4 class="chart-title">Interest Growth Diagram</h4>
                         <canvas id="compoundChart"></canvas>
                     </div>
-
+                    <!-- tips -->
                     <div class="calc-tips">
                         <i class="fa-solid fa-lightbulb icon-stroke"></i>
                         <div class="calc-tips-content">
@@ -277,16 +275,15 @@
             </div>
         </section>
 
+        <!-- saving goal section -->
         <section id="saving-goal-section" class="content-section">
             <div class="section-heading">
                 <h2>Saving Goal Planner</h2>
                 <p>To successfully reach a goal, break it down into manageable steps with a timeline that suits your income.</p>
             </div>
 
-            <div class="saving-goal-grid">
-                
-            </div>
             <div class="calculator-container">
+                <!-- input form -->
                 <div class="calc-card calc-form">
                     <div class="form-group">
                         <label for="goalAmount">Your saving goal:</label>
@@ -317,16 +314,19 @@
                         <input type="number" id="goalTimeframe" placeholder="e.g. 10" min="1">
                     </div>
 
+                    <!-- calculate button -->
                     <button type="button" class="calc-btn" id="goalCalculateBtn">Plan My Goal</button>
                 </div>
 
+                <!-- convert icon -->
                 <div class="calc-swap-icon">
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
 
+                <!-- result card -->
                 <div class="calc-card calc-results saving-goal">
                     <h3>You’ll reach your goal in, <span id="outGoalTimeText">XX years, XX Months</span></h3>
-                    
+                    <!-- result summary -->
                     <div class="result-row">
                         <span>Amount still needed</span>
                         <strong id="goalRemaining">$0.00</strong>
@@ -337,6 +337,7 @@
                         <strong id="goalMonthly">$0.00</strong>
                     </div>
 
+                    <!-- tips card -->
                     <div class="goal-tips">
                         <div class="goal-tip-header">
                             <i class="fa-solid fa-lightbulb"></i>
@@ -352,7 +353,6 @@
                 </div>
                 <!-- Saving Tips Box -->
                 <div class="saving-tips-card">
-                    
                     <div class="tips-left">
                         <h3>Saving Tips</h3>
                         <div class="tip-item">
@@ -373,28 +373,26 @@
                         </div>
                     </div>
                     <div class="tips-right">
-                        <img src="images/saving_goal.png" alt="">
+                        <img src="images/saving_goal.png" alt="Person tracking a savings goal with a progress chart">
                     </div>
                 </div>
-            </div>
-
-            
+            </div>            
         </section>
     </main>
 
-
-    </main>
-
+    <!-- footer section -->
     <footer class="footer-container">
+        <!-- footer logo -->
         <div class="footer-logo">
-            <img class="footer-logo-img" src="images/footer_logo.png" alt="MoneyMatters Logo">
-            <img class="graduate-img" src="images/graduate.png" alt="Graduate Cap Graphic">
+            <img class="footer-logo-img" src="images/footer_logo.png" alt="MoneyMatters footer logo">
+            <img class="graduate-img" src="images/graduate.png" alt="Graduate cap illustration representing learning and financial education">
         </div>
 
         <div class="footer-sections-row">
+            <!-- site map -->
             <details class="site-map footer-details">
                 <summary class="footer-summary">
-                    <h4>Helpful Guides</h4>
+                    <h3>Helpful Guides</h3>
                     <i class="fa-solid fa-chevron-down footer-chevron"></i>
                 </summary>
                 <div class="footer-links-list">
@@ -405,29 +403,30 @@
                     <div class="support_hub"><i class="fa-solid fa-headset"></i><a href="support_hub.html">Support Hub</a></div>
                 </div>
             </details>
-
+            <!-- tools map -->
             <details class="tool-map footer-details">
                 <summary class="footer-summary">
-                    <h4>Useful Tools</h4>
+                    <h3>Useful Tools</h3>
                     <i class="fa-solid fa-chevron-down footer-chevron"></i>
                 </summary>
                 <div class="footer-links-list">
-                    <div class="tax-calculator"><i class="fa-solid fa-calculator"></i><a href="#">Tax Calculator</a></div>
-                    <div class="compound-interest"><i class="fa-solid fa-money-bill-trend-up"></i><a href="#">Compound Interest Calculator</a></div>
-                    <div class="credit-debts"><i class="fa-regular fa-credit-card"></i><a href="#">Credit Card & Debts Simulator</a></div>
-                    <div class="budget-tool"><i class="fa-solid fa-sack-dollar"></i><a href="#">Budget Tool</a></div>
+                    <div class="tax-calculator"><i class="fa-solid fa-calculator"></i><a href="earning_tax.html#paycheck-calculator-section">Tax Calculator</a></div>
+                    <div class="compound-interest"><i class="fa-solid fa-money-bill-trend-up"></i><a href="saving_invest.html#compound-interest-section">Compound Interest Calculator</a></div>
+                    <div class="credit-debts"><i class="fa-regular fa-credit-card"></i><a href="budgeting_traps.html#debts-growth-simulator-section">Credit Card & Debts Simulator</a></div>
+                    <div class="budget-tool"><i class="fa-solid fa-sack-dollar"></i><a href="budgeting_traps.html#budget-tool-section">Budget Tool</a></div>
                 </div>
             </details>
-
+            
             <div class="footer-bottom-row">
                 <div class="stay-connect">
-                    <h4>Stay Connected</h4>
-                    <div class="message-box-footer"><i class="fa-solid fa-paper-plane"></i><a href="#">Message Box</a></div>
+                    <!-- stay connect section -->
+                    <h3>Stay Connected</h3>
+                    <div class="message-box-footer"><i class="fa-solid fa-paper-plane"></i><a href="support_hub.html#message-box-section">Message Box</a></div>
                     <div class="email"><i class="fa-solid fa-envelope"></i><p>moneymatters@gmail.com</p></div>
                 </div>
-
+                <!-- social media section -->
                 <div class="social-media">
-                    <h4>Follow Us</h4>
+                    <h3>Follow Us</h3>
                     <div class="social-icons">
                         <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                         <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -438,16 +437,26 @@
             </div>
         </div>
 
+        <!-- copyright & media attribution -->
         <div class="copyright">
-            &copy; 2026 MoneyMatters by Hubert Kwan. All right reserved | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+            <p>&copy; 2026 MoneyMatters by Hubert Kwan. All right reserved | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+            <p>All information used on this website is based on official New Zealand government and financial education sources.</p>
             <details class="media-attributions">
                 <summary>
-                    <span>Media Attributions</span>
+                    Media Attributions
                     <i class="fa-solid fa-chevron-down"></i>
                 </summary>
+                <p><span>All images used are generated by Chat GPT</span></p>
+                <p><span>Payslip sample, diagrams, and charts by Hubert Kwan</span></p>
             </details>
         </div>
     </footer>
+
+    <!-- back to top button -->
+    <button type="button" id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Money Management for students">
-    <meta name="keywords" content="money management">
+    <meta name="description" content="Find money support, glossary definitions, FAQs, and guidance for common student finance questions in one place.">
+    <meta name="keywords" content="support hub, money help, FAQs, jargon, finance glossary, student support, financial advice">
     <meta name="author" content="Hubert Kwan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f98f8eda6d.js" crossorigin="anonymous"></script>
@@ -11,15 +11,18 @@
     <title>MoneyMatters | Support Hub</title>
 </head>
 <body>
+    <!-- header section -->
     <header>
+        <!-- navigation bar -->
         <nav class="nav-container">
             <div class="nav-wrapper">
                 <div class="nav-logo">
                     <a href="index.html">
-                        <img src="images/logo-cropped.svg" alt="MoneyMatters Logo">
+                        <img src="images/logo-cropped.svg" alt="MoneyMatters logo">
                     </a>
                 </div>
 
+                <!-- search bar -->
                 <div class="search-container" id="searchContainer">
                     <input type="text" class="expandable-search-input" placeholder="Search...">
                     <button class="search-icon-btn" id="searchToggleBtn" aria-label="Toggle Search">
@@ -27,36 +30,39 @@
                     </button>
                 </div>
 
-                <input type="checkbox" id="menu-toggle">
-                <label for="menu-toggle" class="hamburger-btn" aria-label="Toggle Navigation">
+                <!-- burger menu icon -->
+                <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
+                <label for="menu-toggle" class="hamburger-btn">
                     <i class="fa-solid fa-bars"></i>
                 </label>
 
+                <!-- nav links -->
                 <div class="nav-links">
-                    <div class="home">
+                    <a href="index.html" class="home">
                         <i class="fa-solid fa-house"></i>
-                        <a href="index.html">Home</a>
-                    </div>
-                    <div class="earning-tax">
+                        <span>Home</span>
+                    </a>
+                    <a href="earning_tax.html" class="earning-tax">
                         <i class="fa-solid fa-wallet"></i>
-                        <a href="earning_tax.html">Earning & Taxes</a>
-                    </div>
-                    <div class="saving-invest">
+                        <span>Earning & Taxes</span>
+                    </a>
+                    <a href="saving_invest.html" class="saving-invest">
                         <i class="fa-solid fa-piggy-bank"></i>
-                        <a href="saving_invest.html">Saving & Investment</a>
-                    </div>
-                    <div class="budgeting-traps">
+                        <span>Saving & Investment</span>
+                    </a>
+                    <a href="budgeting_traps.html" class="budgeting-traps">
                         <i class="fa-solid fa-scale-balanced"></i>
-                        <a href="budgeting_traps.html">Budgeting & Traps</a>
-                    </div>
-                    <div class="support-hub">
+                        <span>Budgeting & Traps</span>
+                    </a>
+                    <a href="support_hub.html" class="active support-hub">
                         <i class="fa-solid fa-headset"></i>
-                        <a href="support_hub.html" class="active">Support Hub</a>
-                    </div>
+                        <span>Support Hub</span>
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
+    <!-- hero banner section -->
     <section class="hero-banner support-hub">
         <div class="banner-container">
             <div class="hero-left">
@@ -66,20 +72,23 @@
                 </div>
             </div>
             <div class="hero-right support-hub">
-                <img src="images/support_hub_banner.png" alt="A man holding a ipad and think of money management">
+                <img src="images/support_hub_banner.png" alt="Illustration of a person reviewing money planning on a tablet">
             </div>
         </div>
     </section>
+    <!-- progress bar section -->
     <div class="progress-bar-container">
         <div class="progress-bar" id="progressBar">
-            <a href="#jargon-translator-section" class="nav-tab active support-nav">Jargon Translator</a>
+            <a href="#jargon-translator-section" class="nav-tab support-nav">Jargon Translator</a>
             <a href="#faq-section" class="nav-tab support-nav">FAQs</a>
             <a href="#navigate-moneymatters-section" class="nav-tab support-nav">How to use MoneyMatters</a>
             <a href="#about-us-section" class="nav-tab support-nav">About Us</a>
         </div>
     </div>
 
+    <!-- main section -->
     <main class="container">
+        <!-- jargon section -->
         <sectoin id="jargon-translator-section" class="content-section">
             <div class="section-heading">
                 <h2>Jargon Translator</h2>
@@ -87,73 +96,77 @@
             </div>
             <div class="jargon-container support-hub">
                 <h3>Search for a financial term</h3>
+                <!-- jargon search bar -->
                 <div class="jargon-search">
                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" placeholder="Type a word... like “net pay”, “Compound Interst”">
+                    <input id="jargonSearchInput" type="text" placeholder="Type a word... like “net pay”, “Compound Interst”">
+                    <span class="jargon-search-status" id="jargonSearchStatus" aria-live="polite"></span>
                 </div>
+                <!-- expandable jargon terms list -->
                 <details class="jargon-list">
                     <summary>
                         <span>Expand full Jargon translate list</span>
                         <i class="fa-solid fa-chevron-down"></i>
                     </summary>
                     <div class="jargon-item-container">
-                        <div class="jargon-item">
+                        <div class="jargon-item" id="paye" data-term="paye">
                             <h4>PAYE</h4>
                             <p><strong>PAYE</strong> stands for <strong>Pay As You Earn</strong>. PAYE is the system used to collect income tax from employment income. Your employer normally deducts it from your pay before you receive your wages.</p>
                         </div>
-                        <div class="jargon-item">
+                        <div class="jargon-item" id="payslip" data-term="payslip">
+                            <h4>Payslip</h4>
+                            <p>A payslip is a record of your earnings, deductions, and take-home pay for a pay period.</p>
+                        </div>
+                        <div class="jargon-item" id="tax-bracket" data-term="tax-bracket">
                             <h4>Tax Bracket</h4>
                             <p>A range of income that is taxed at a particular rate. In New Zealand uses progressive tax rates, so different portions of income can be taxed at different rates.</p>
                         </div>
-                        <div class="jargon-item">
+                        <div class="jargon-item" id="apr" data-term="apr">
                             <h4>APR</h4>
                             <p>APR means Annual Percentage Rate. A percentage used to describe the yearly cost of borrowing, including certain costs depending on the product.</p>
                         </div>
-                        <div class="jargon-item">
+                        <div class="jargon-item" id="gross-pay" data-term="gross-pay">
                             <h4>Gross Pay</h4>
                             <p>The amount you earns before deductions.</p>
                         </div>
-                        <div class="jargon-item">
+                        <div class="jargon-item" id="net-pay" data-term="net-pay">
                             <h4>Net Pay</h4>
                             <p>The amount you earns after deductions.</p>
                         </div>
-                        <div class="jargon-item">
+                        <div class="jargon-item" id="budget" data-term="budget">
                             <h4>Budget</h4>
                             <p>A plan for how you will use your income.</p>
                         </div>
-                        <div class="jargon-item">
+                        <div class="jargon-item" id="principal" data-term="principal">
                             <h4>Principal</h4>
                             <p>The original amount of money saved or borrowed before interest is added.</p>
                         </div>
-                        <div class="jargon-item">
+                        <div class="jargon-item" id="kiwisaver" data-term="kiwisaver">
                             <h4>KiwiSaver</h4>
                             <p>A long-term savings scheme for eligible New Zealanders.</p>
                         </div>
-                        <div class="jargon-item">
+                        <div class="jargon-item" id="interest" data-term="interest">
                             <h4>Interest</h4>
                             <p>Extra money that is earned on savings or charged when borrowing money.</p>
                         </div>
-                        <div class="jargon-item">
+                        <div class="jargon-item" id="compound-interest" data-term="compound-interest">
                             <h4>Compound Interest</h4>
                             <p>Interest that can be earned on your original savings as well as interest that has already been added.</p>
                         </div>
-                        <div class="jargon-item">
+                        <div class="jargon-item" id="credit" data-term="credit">
                             <h4>Credit</h4>
                             <p>Money that you borrow and agree to repay later.</p>
                         </div>
-                        <div class="jargon-item">
+                        <div class="jargon-item" id="debts" data-term="debts">
                             <h4>Debt</h4>
                             <p>Money that you owe to another person, organisation, or lender like bank.</p>
-                        </div>
-                        <div class="jargon-item">
-                            <h4>Budget</h4>
-                            <p>A plan for how you will use your income.</p>
                         </div>
                     </div>
             </details>
             </div>
         </sectoin>
 
+        <!-- faq section -->
         <section id="faq-section" class="content-section">
             <div class="section-heading">
                 <h2>Frequently Asked Questions</h2>
@@ -247,11 +260,13 @@
             </div>
         </section>
 
+        <!-- how to use section -->
         <section id="navigate-moneymatters-section" class="content-section">
             <div class="section-heading">
                 <h2>How to Use Our Website</h2>
                 <h3>Here are the suggested steps</h3>
             </div>
+            <!-- step by step website navigation -->
             <div class="moneymatters-navigation-container">
                 <div class="process-card">
                     <h4>Step 1 — Choose Your Situation</h4>
@@ -300,11 +315,13 @@
             </div>
         </section>
 
+        <!-- about us section -->
         <section id="about-us-section" class="content-section">
              <div class="section-heading">
                 <h2>About Us</h2>
             </div>
             <div class="about-us-container">
+                <!-- our background card -->
                 <div class="web-desc-card">
                     <h3>Our background</h3>
                     <p><strong>MoneyMatters is an educational website designed to help New Zealand high school students understand everyday money management. The purpose is to explain these topics using simple language, practical examples and interactive tools rather than complicated financial terminology.</strong></p>
@@ -329,8 +346,8 @@
                     </div>
                 </div>
             
-
-                <div class="message-box-container">
+                <!-- message box card -->
+                <div id="message-box-section" class="message-box-container">
                     <h3>Your Voice Matters to Us</h3>
                     <p>Don’t hesitate, tell us about what you found useful, counfusing, or difficult to understand. This not only help yourself, but also other people to have a better experience.</p>
                     <div class="message-box">
@@ -342,16 +359,19 @@
         </section>
     </main> 
     
+    <!-- footer section -->
     <footer class="footer-container">
+        <!-- footer logo -->
         <div class="footer-logo">
-            <img class="footer-logo-img" src="images/footer_logo.png" alt="MoneyMatters Logo">
-            <img class="graduate-img" src="images/graduate.png" alt="Graduate Cap Graphic">
+            <img class="footer-logo-img" src="images/footer_logo.png" alt="MoneyMatters footer logo">
+            <img class="graduate-img" src="images/graduate.png" alt="Graduate cap illustration representing learning and financial education">
         </div>
 
         <div class="footer-sections-row">
+            <!-- site map -->
             <details class="site-map footer-details">
                 <summary class="footer-summary">
-                    <h4>Helpful Guides</h4>
+                    <h3>Helpful Guides</h3>
                     <i class="fa-solid fa-chevron-down footer-chevron"></i>
                 </summary>
                 <div class="footer-links-list">
@@ -362,29 +382,30 @@
                     <div class="support_hub"><i class="fa-solid fa-headset"></i><a href="support_hub.html">Support Hub</a></div>
                 </div>
             </details>
-
+            <!-- tools map -->
             <details class="tool-map footer-details">
                 <summary class="footer-summary">
-                    <h4>Useful Tools</h4>
+                    <h3>Useful Tools</h3>
                     <i class="fa-solid fa-chevron-down footer-chevron"></i>
                 </summary>
                 <div class="footer-links-list">
-                    <div class="tax-calculator"><i class="fa-solid fa-calculator"></i><a href="#">Tax Calculator</a></div>
-                    <div class="compound-interest"><i class="fa-solid fa-money-bill-trend-up"></i><a href="#">Compound Interest Calculator</a></div>
-                    <div class="credit-debts"><i class="fa-regular fa-credit-card"></i><a href="#">Credit Card & Debts Simulator</a></div>
-                    <div class="budget-tool"><i class="fa-solid fa-sack-dollar"></i><a href="#">Budget Tool</a></div>
+                    <div class="tax-calculator"><i class="fa-solid fa-calculator"></i><a href="earning_tax.html#paycheck-calculator-section">Tax Calculator</a></div>
+                    <div class="compound-interest"><i class="fa-solid fa-money-bill-trend-up"></i><a href="saving_invest.html#compound-interest-section">Compound Interest Calculator</a></div>
+                    <div class="credit-debts"><i class="fa-regular fa-credit-card"></i><a href="budgeting_traps.html#debts-growth-simulator-section">Credit Card & Debts Simulator</a></div>
+                    <div class="budget-tool"><i class="fa-solid fa-sack-dollar"></i><a href="budgeting_traps.html#budget-tool-section">Budget Tool</a></div>
                 </div>
             </details>
-
+            
             <div class="footer-bottom-row">
                 <div class="stay-connect">
-                    <h4>Stay Connected</h4>
-                    <div class="message-box-footer"><i class="fa-solid fa-paper-plane"></i><a href="#">Message Box</a></div>
+                    <!-- stay connect section -->
+                    <h3>Stay Connected</h3>
+                    <div class="message-box-footer"><i class="fa-solid fa-paper-plane"></i><a href="support_hub.html#message-box-section">Message Box</a></div>
                     <div class="email"><i class="fa-solid fa-envelope"></i><p>moneymatters@gmail.com</p></div>
                 </div>
-
+                <!-- social media section -->
                 <div class="social-media">
-                    <h4>Follow Us</h4>
+                    <h3>Follow Us</h3>
                     <div class="social-icons">
                         <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                         <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -395,16 +416,26 @@
             </div>
         </div>
 
+        <!-- copyright & media attribution -->
         <div class="copyright">
-            &copy; 2026 MoneyMatters by Hubert Kwan. All right reserved | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+            <p>&copy; 2026 MoneyMatters by Hubert Kwan. All right reserved | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+            <p>All information used on this website is based on official New Zealand government and financial education sources.</p>
             <details class="media-attributions">
                 <summary>
-                    <span>Media Attributions</span>
+                    Media Attributions
                     <i class="fa-solid fa-chevron-down"></i>
                 </summary>
+                <p><span>All images used are generated by Chat GPT</span></p>
+                <p><span>Payslip sample, diagrams, and charts by Hubert Kwan</span></p>
             </details>
         </div>
     </footer>
+
+    <!-- back to top button -->
+    <button type="button" id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <script src="script.js"></script>
     
 </body>

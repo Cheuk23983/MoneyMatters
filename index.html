@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Money Management for students">
-    <meta name="keywords" content="money management">
+    <meta name="description" content="Learn essential money skills for students with budgeting, saving, earning, taxes, and smart financial habits.">
+    <meta name="keywords" content="student money, budgeting, saving, earning, tax, financial literacy, NZ money skills">
     <meta name="author" content="Hubert Kwan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f98f8eda6d.js" crossorigin="anonymous"></script>
@@ -12,15 +12,18 @@
     <title>MoneyMatters | Home</title>
 </head>
 <body>
+    <!-- header section -->
     <header>
+        <!-- navigation bar -->
         <nav class="nav-container">
             <div class="nav-wrapper">
                 <div class="nav-logo">
                     <a href="index.html">
-                        <img src="images/logo-cropped.svg" alt="MoneyMatters Logo">
+                        <img src="images/logo-cropped.svg" alt="MoneyMatters logo">
                     </a>
                 </div>
 
+                <!-- search bar -->
                 <div class="search-container" id="searchContainer">
                     <input type="text" class="expandable-search-input" placeholder="Search...">
                     <button class="search-icon-btn" id="searchToggleBtn" aria-label="Toggle Search">
@@ -28,36 +31,39 @@
                     </button>
                 </div>
 
-                <input type="checkbox" id="menu-toggle">
-                <label for="menu-toggle" class="hamburger-btn" aria-label="Toggle Navigation">
+                <!-- burger menu icon -->
+                <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
+                <label for="menu-toggle" class="hamburger-btn">
                     <i class="fa-solid fa-bars"></i>
                 </label>
 
+                <!-- nav links -->
                 <div class="nav-links">
-                    <div class="home">
+                    <a href="index.html" class="active home">
                         <i class="fa-solid fa-house"></i>
-                        <a href="index.html" class="active">Home</a>
-                    </div>
-                    <div class="earning-tax">
+                        <span>Home</span>
+                    </a>
+                    <a href="earning_tax.html" class="earning-tax">
                         <i class="fa-solid fa-wallet"></i>
-                        <a href="earning_tax.html">Earning & Taxes</a>
-                    </div>
-                    <div class="saving-invest">
+                        <span>Earning & Taxes</span>
+                    </a>
+                    <a href="saving_invest.html" class="saving-invest">
                         <i class="fa-solid fa-piggy-bank"></i>
-                        <a href="saving_invest.html">Saving & Investment</a>
-                    </div>
-                    <div class="budgeting-traps">
+                        <span>Saving & Investment</span>
+                    </a>
+                    <a href="budgeting_traps.html" class="budgeting-traps">
                         <i class="fa-solid fa-scale-balanced"></i>
-                        <a href="budgeting_traps.html">Budgeting & Traps</a>
-                    </div>
-                    <div class="support-hub">
+                        <span>Budgeting & Traps</span>
+                    </a>
+                    <a href="support_hub.html" class="support-hub">
                         <i class="fa-solid fa-headset"></i>
-                        <a href="support_hub.html">Support Hub</a>
-                    </div>
+                        <span>Support Hub</span>
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
+    <!-- hero banner section -->
     <section class="hero-banner index">
             <div class="banner-container">
                 <div class="hero-left">
@@ -72,13 +78,15 @@
                     </div>
                 </div>
                 <div class="hero-right">
-                    <img src="images/hero_banner.png" alt="A man holding a ipad and think of money management">
+                    <img src="images/hero_banner.png" alt="Illustration of a person reviewing money planning on a tablet">
                 </div>
             </div>
            
         </section>
 
+    <!-- main section -->
     <main class="container">
+        <!-- situation section -->
         <section class="situation-section">
             <div class="section-heading">
                 <h2>Find Your Situation</h2>
@@ -86,14 +94,14 @@
             <div class="situation-cards">
                 <a href="earning_tax.html" class="situation-card blue">
                     <div class="situation-img-container">
-                        <img src="images/wallet.png" alt="a sample credit card with a safe shield">
+                        <img src="images/wallet.png" alt="Wallet and shield icon representing safe money management">
                     </div>
                     <h3>I Just Got My First Job</h3>
                     <p>Starting your first job comes with new responsibilities. Learn how to read your payslip, understand PAYE and KiwiSaver.</p>
                 </a>
                 <a href="saving_invest.html" class="situation-card red">
                     <div class="situation-img-container">
-                        <img src="images/piggy_bank.png" alt="A pggy with money inserting">
+                        <img src="images/piggy_bank.png" alt="Piggy bank with coins representing saving money">
                     </div>
                     <h3>I Want to Save Money</h3>
                     <p>Whether you are saving for a car, university, a trip, or something else, learn how bank accounts, compound interest, and savings goals can help.</p>
@@ -102,7 +110,7 @@
                 
                 <a href="budgeting_traps.html" class="situation-card yellow">
                     <div class="situation-img-container">
-                        <img src="images/credit_card_safe.png" alt="a sample credit card with a safe shield">
+                        <img src="images/credit_card_safe.png" alt="Credit card protected by a shield icon for secure spending">
                     </div>
                     <h3>I Want to Spend Safely</h3>
                     <p>Learn how to separate needs from wants, create a budget, understand credit, and recognise common debt traps before they become a problem.</p>
@@ -110,46 +118,49 @@
             </div>
         </section>
 
+        <!-- useful tools section -->
         <section class="useful-tools-section">
             <div class="section-heading">
                 <h2>Useful Tools</h2>
             </div>
             <div class="tool-cards">
                 <a href="earning_tax.html#paycheck-calculator-section" class="tool-card">
-                    <div class="tool-img-container">
-                        <img src="images/calculator.png" alt="A calculator with number on it">
+                    <div class="tool-img-container tax">
+                        <img src="images/calculator.png" alt="Calculator with numbers representing financial calculations">
                     </div>
                     <h3>Tax calculator</h3>
                 </a>
 
                <a href="saving_invest.html#compound-interest-section" class="tool-card">
                     <div class="tool-img-container">
-                        <img src="images/increase_flow.png" alt="A increasing chart">
+                        <img src="images/increase_flow.png" alt="Rising chart showing upward financial growth">
                     </div>
                     <h3>Compound Interest Calculator</h3>
                </a>
 
                 <a href="budgeting_traps.html#debts-growth-simulator-section" class="tool-card">
                     <div class="tool-img-container">
-                        <img src="images/credit_card_danger.png" alt="A credit card with a triagnle danger icon">
+                        <img src="images/credit_card_danger.png" alt="Credit card with a warning symbol highlighting debt risks">
                     </div>
                     <h3>Credit Card & Debts Simulator</h3>
                 </a>
                     
                 <a href="budgeting_traps.html#budget-tool-section" class="tool-card">
-                    <div class="tool-img-container">
-                        <img src="images/budget.png" alt="A budget tool">
+                    <div class="tool-img-container budget-icon">
+                        <img src="images/budget.png" alt="Budget planner showing needs and wants categories">
                     </div>
                     <h3>Budget Tool</h3>
                 </a>
             </div>
         </section>
  
+        <!-- payslip section -->
         <section class="payslip-section">
             <div class="section-heading">
             <h2>How a Payslip Looks like </h2>
             </div>
             <div class="payslip-container">
+                <!-- sample payslip table -->
                 <div class="payslip-box">
                     <div class="payslip-header">
                         <span>Money Matters</span>
@@ -233,6 +244,7 @@
             </div>
         </section>
 
+        <!-- jargon and faq section -->
         <section class="translator-faqs-section">
             <div class="jargon-container">
                 <div class="jargon-content">
@@ -241,18 +253,19 @@
                     </div>
                     <!-- Search Input -->
                     <div class="jargon-search">
-                        <input type="text" placeholder="Search for a term">
+                        <input id="homeJargonSearchInput" type="text" placeholder="Search for a term">
+                        <span id="homeJargonSearchStatus" class="jargon-search-status" aria-live="polite"></span>
                     </div>
                     <p class="popular-title">Popular Terms:</p>
                     <div class="pills-container">
-                        <button type="button" class="pill">Gross pay</button>
-                        <button type="button" class="pill">Net pay</button>
-                        <button type="button" class="pill">Debts</button>
-                        <button type="button" class="pill">Payslip</button>
-                        <button type="button" class="pill">Compound Interest</button>
-                        <button type="button" class="pill">PAYE</button>
-                        <button type="button" class="pill">KiwiSaver</button>
-                        <button type="button" class="pill">Interest</button>
+                        <button type="button" class="pill" data-term="gross-pay">Gross pay</button>
+                        <button type="button" class="pill" data-term="net-pay">Net pay</button>
+                        <button type="button" class="pill" data-term="debts">Debts</button>
+                        <button type="button" class="pill" data-term="payslip">Payslip</button>
+                        <button type="button" class="pill" data-term="compound-interest">Compound Interest</button>
+                        <button type="button" class="pill" data-term="paye">PAYE</button>
+                        <button type="button" class="pill" data-term="kiwisaver">KiwiSaver</button>
+                        <button type="button" class="pill" data-term="interest">Interest</button>
                     </div>
                 </div>
                 <a href="support_hub.html" class="card-footer-link">
@@ -334,16 +347,19 @@
         </section>
     </main>
 
+    <!-- footer section -->
     <footer class="footer-container">
+        <!-- footer logo -->
         <div class="footer-logo">
-            <img class="footer-logo-img" src="images/footer_logo.png" alt="MoneyMatters Logo">
-            <img class="graduate-img" src="images/graduate.png" alt="Graduate Cap Graphic">
+            <img class="footer-logo-img" src="images/footer_logo.png" alt="MoneyMatters footer logo">
+            <img class="graduate-img" src="images/graduate.png" alt="Graduate cap illustration representing learning and financial education">
         </div>
 
         <div class="footer-sections-row">
+            <!-- site map -->
             <details class="site-map footer-details">
                 <summary class="footer-summary">
-                    <h4>Helpful Guides</h4>
+                    <h3>Helpful Guides</h3>
                     <i class="fa-solid fa-chevron-down footer-chevron"></i>
                 </summary>
                 <div class="footer-links-list">
@@ -354,29 +370,30 @@
                     <div class="support_hub"><i class="fa-solid fa-headset"></i><a href="support_hub.html">Support Hub</a></div>
                 </div>
             </details>
-
+            <!-- tools map -->
             <details class="tool-map footer-details">
                 <summary class="footer-summary">
-                    <h4>Useful Tools</h4>
+                    <h3>Useful Tools</h3>
                     <i class="fa-solid fa-chevron-down footer-chevron"></i>
                 </summary>
                 <div class="footer-links-list">
-                    <div class="tax-calculator"><i class="fa-solid fa-calculator"></i><a href="#">Tax Calculator</a></div>
-                    <div class="compound-interest"><i class="fa-solid fa-money-bill-trend-up"></i><a href="#">Compound Interest Calculator</a></div>
-                    <div class="credit-debts"><i class="fa-regular fa-credit-card"></i><a href="#">Credit Card & Debts Simulator</a></div>
-                    <div class="budget-tool"><i class="fa-solid fa-sack-dollar"></i><a href="#">Budget Tool</a></div>
+                    <div class="tax-calculator"><i class="fa-solid fa-calculator"></i><a href="earning_tax.html#paycheck-calculator-section">Tax Calculator</a></div>
+                    <div class="compound-interest"><i class="fa-solid fa-money-bill-trend-up"></i><a href="saving_invest.html#compound-interest-section">Compound Interest Calculator</a></div>
+                    <div class="credit-debts"><i class="fa-regular fa-credit-card"></i><a href="budgeting_traps.html#debts-growth-simulator-section">Credit Card & Debts Simulator</a></div>
+                    <div class="budget-tool"><i class="fa-solid fa-sack-dollar"></i><a href="budgeting_traps.html#budget-tool-section">Budget Tool</a></div>
                 </div>
             </details>
-
+            
             <div class="footer-bottom-row">
                 <div class="stay-connect">
-                    <h4>Stay Connected</h4>
-                    <div class="message-box-footer"><i class="fa-solid fa-paper-plane"></i><a href="#">Message Box</a></div>
+                    <!-- stay connect section -->
+                    <h3>Stay Connected</h3>
+                    <div class="message-box-footer"><i class="fa-solid fa-paper-plane"></i><a href="support_hub.html#message-box-section">Message Box</a></div>
                     <div class="email"><i class="fa-solid fa-envelope"></i><p>moneymatters@gmail.com</p></div>
                 </div>
-
+                <!-- social media section -->
                 <div class="social-media">
-                    <h4>Follow Us</h4>
+                    <h3>Follow Us</h3>
                     <div class="social-icons">
                         <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                         <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -387,17 +404,27 @@
             </div>
         </div>
 
+        <!-- copyright & media attribution -->
         <div class="copyright">
-            &copy; 2026 MoneyMatters by Hubert Kwan. All right reserved | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+            <p>&copy; 2026 MoneyMatters by Hubert Kwan. All right reserved | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+            <p>All information used on this website is based on official New Zealand government and financial education sources.</p>
             <details class="media-attributions">
                 <summary>
-                    <span>Media Attributions</span>
+                    Media Attributions
                     <i class="fa-solid fa-chevron-down"></i>
                 </summary>
+                <p><span>All images used are generated by Chat GPT</span></p>
+                <p><span>Payslip sample, diagrams, and charts by Hubert Kwan</span></p>
             </details>
         </div>
     </footer>
 
+    <!-- back to top button -->
+    <button type="button" id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- javascript invention -->
     <script src="script.js"></script>
 </body>
 </html>

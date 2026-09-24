@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Money Management for students">
-    <meta name="keywords" content="money management">
+    <meta name="description" content="Understand payslips, PAYE, KiwiSaver, tax basics, and earning money in New Zealand as a student.">
+    <meta name="keywords" content="earning money, PAYE, KiwiSaver, payslip, tax calculator, NZ tax, student income">
     <meta name="author" content="Hubert Kwan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f98f8eda6d.js" crossorigin="anonymous"></script>
@@ -11,52 +11,57 @@
     <title>MoneyMatters | Earning & Taxes</title>
 </head>
 <body>
+    <!-- header section -->
     <header>
+        <!-- navigation bar -->
         <nav class="nav-container">
             <div class="nav-wrapper">
                 <div class="nav-logo">
                     <a href="index.html">
-                        <img src="images/logo-cropped.svg" alt="MoneyMatters Logo">
+                        <img src="images/logo-cropped.svg" alt="MoneyMatters logo">
                     </a>
                 </div>
 
+                <!-- search bar -->
                 <div class="search-container" id="searchContainer">
                     <input type="text" class="expandable-search-input" placeholder="Search...">
                     <button class="search-icon-btn" id="searchToggleBtn" aria-label="Toggle Search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
-
-                <input type="checkbox" id="menu-toggle">
-                <label for="menu-toggle" class="hamburger-btn" aria-label="Toggle Navigation">
+                <!-- burger menu icon -->
+                <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
+                <label for="menu-toggle" class="hamburger-btn">
                     <i class="fa-solid fa-bars"></i>
                 </label>
 
+                <!-- nav links -->
                 <div class="nav-links">
-                    <div class="home">
+                    <a href="index.html" class="home">
                         <i class="fa-solid fa-house"></i>
-                        <a href="index.html">Home</a>
-                    </div>
-                    <div class="earning-tax">
+                        <span>Home</span>
+                    </a>
+                    <a href="earning_tax.html" class="active earning-tax">
                         <i class="fa-solid fa-wallet"></i>
-                        <a href="earning_tax.html"  class="active">Earning & Taxes</a>
-                    </div>
-                    <div class="saving-invest">
+                        <span>Earning & Taxes</span>
+                    </a>
+                    <a href="saving_invest.html" class="saving-invest">
                         <i class="fa-solid fa-piggy-bank"></i>
-                        <a href="saving_invest.html">Saving & Investment</a>
-                    </div>
-                    <div class="budgeting-traps">
+                        <span>Saving & Investment</span>
+                    </a>
+                    <a href="budgeting_traps.html" class="budgeting-traps">
                         <i class="fa-solid fa-scale-balanced"></i>
-                        <a href="budgeting_traps.html">Budgeting & Traps</a>
-                    </div>
-                    <div class="support-hub">
+                        <span>Budgeting & Traps</span>
+                    </a>
+                    <a href="support_hub.html" class="support-hub">
                         <i class="fa-solid fa-headset"></i>
-                        <a href="support_hub.html">Support Hub</a>
-                    </div>
+                        <span>Support Hub</span>
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
+    <!-- hero banner section -->
     <section class="hero-banner earning">
         <div class="banner-container">
             <div class="hero-left">
@@ -66,26 +71,31 @@
                 </div>
             </div>
             <div class="hero-right">
-                <img src="images/earning_banner.png" alt="A man holding a ipad and think of money management">
+                <img src="images/earning_banner.png" alt="Illustration of a person reviewing money planning on a tablet">
             </div>
         </div>
     </section>
+
+    <!-- progress bar section -->
     <div class="progress-bar-container">
         <div class="progress-bar" id="progressBar">
-            <a href="#payslip-section" class="nav-tab active earning-nav">Payslip Basics</a>
+            <a href="#payslip-section" class="nav-tab earning-nav">Payslip Basics</a>
             <a href="#tax-works-section" class="nav-tab earning-nav">How Taxes Works</a>
-            <a href="#calculator-section" class="nav-tab earning-nav">Paycheck Calculator</a>
+            <a href="#paycheck-calculator-section" class="nav-tab earning-nav">Paycheck Calculator</a>
             <a href="#kiwisaver-section" class="nav-tab earning-nav">KiwiSaver</a>
         </div>
     </div>
 
+    <!-- main section -->
     <main class="container">
+        <!-- payslip section -->
         <section id="payslip-section" class="content-section">
             <div class="section-heading">
                 <h2>Reading Your First Payslip</h2>
                 <p>A payslip show how your pay is worked out. Here are the main parts.</p>
             </div>
             <div class="payslip-guide-container">
+                <!-- sample payslip table -->
                 <div class="earning-payslip-box">
                     <h3 class="payslip-title">Sample Payslip</h3>
                     <div class="payslip-header">
@@ -158,6 +168,7 @@
                     </table>
                 </div>
 
+                <!-- payslip explanation cards -->
                 <div class="payslip-explanations-container">
                     <div class="explanation-card">
                         <div class="explanation-num num-blue">1</div>
@@ -257,6 +268,7 @@
             </div>
         </section>
 
+        <!-- paycheck calculator section -->
         <section id="paycheck-calculator-section" class="content-section">
             <div class="section-heading">
                 <h2>Paycheck Tax Calculator</h2>
@@ -264,6 +276,7 @@
             </div>
 
             <div class="calculator-container">
+                <!-- input form -->
                 <div class="calc-card calc-form">
                     <div class="form-group">
                         <label for="incomeInput">How much do you earn?</label>
@@ -298,13 +311,16 @@
                         </select>
                     </div>
 
+                    <!-- calculate button -->
                     <button type="button" class="calc-btn" id="calculateBtn">Calculate</button>
                 </div>
 
+                <!-- convert icon -->
                 <div class="calc-swap-icon">
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
 
+                <!-- result card -->
                 <div class="calc-card calc-results">
                     <h3>Your Estimate</h3>
                     
@@ -327,7 +343,7 @@
                         <span>Take Home Pay</span>
                         <strong id="outTakeHome">$0.00</strong>
                     </div>
-
+                    
                     <div class="calc-disclaimer">
                         <div class="disclaimer-top">
                             <i class="fa-solid fa-lightbulb"></i>
@@ -339,7 +355,7 @@
             </div>
         </section>
 
-        <!-- 3. KiwiSaver Section -->
+        <!-- kiwisaver section -->
         <section id="kiwisaver-section" class="content-section">
             <div class="section-heading">
                 <h2>KiwiSaver</h2>
@@ -347,6 +363,7 @@
             </div>
 
             <div class="kiwisaver-container">
+                <!-- kiwisaver explanation cards -->
                 <div class="ks-card">
                     <h3 class=" ks-green">How It Works?</h3>
                     <ul>
@@ -376,16 +393,20 @@
             </div>
         </section>
     </main>
+
+    <!-- footer section -->
     <footer class="footer-container">
+        <!-- footer logo -->
         <div class="footer-logo">
-            <img class="footer-logo-img" src="images/footer_logo.png" alt="MoneyMatters Logo">
-            <img class="graduate-img" src="images/graduate.png" alt="Graduate Cap Graphic">
+            <img class="footer-logo-img" src="images/footer_logo.png" alt="MoneyMatters footer logo">
+            <img class="graduate-img" src="images/graduate.png" alt="Graduate cap illustration representing learning and financial education">
         </div>
 
         <div class="footer-sections-row">
+            <!-- site map -->
             <details class="site-map footer-details">
                 <summary class="footer-summary">
-                    <h4>Helpful Guides</h4>
+                    <h3>Helpful Guides</h3>
                     <i class="fa-solid fa-chevron-down footer-chevron"></i>
                 </summary>
                 <div class="footer-links-list">
@@ -396,29 +417,30 @@
                     <div class="support_hub"><i class="fa-solid fa-headset"></i><a href="support_hub.html">Support Hub</a></div>
                 </div>
             </details>
-
+            <!-- tools map -->
             <details class="tool-map footer-details">
                 <summary class="footer-summary">
-                    <h4>Useful Tools</h4>
+                    <h3>Useful Tools</h3>
                     <i class="fa-solid fa-chevron-down footer-chevron"></i>
                 </summary>
                 <div class="footer-links-list">
-                    <div class="tax-calculator"><i class="fa-solid fa-calculator"></i><a href="#">Tax Calculator</a></div>
-                    <div class="compound-interest"><i class="fa-solid fa-money-bill-trend-up"></i><a href="#">Compound Interest Calculator</a></div>
-                    <div class="credit-debts"><i class="fa-regular fa-credit-card"></i><a href="#">Credit Card & Debts Simulator</a></div>
-                    <div class="budget-tool"><i class="fa-solid fa-sack-dollar"></i><a href="#">Budget Tool</a></div>
+                    <div class="tax-calculator"><i class="fa-solid fa-calculator"></i><a href="earning_tax.html#paycheck-calculator-section">Tax Calculator</a></div>
+                    <div class="compound-interest"><i class="fa-solid fa-money-bill-trend-up"></i><a href="saving_invest.html#compound-interest-section">Compound Interest Calculator</a></div>
+                    <div class="credit-debts"><i class="fa-regular fa-credit-card"></i><a href="budgeting_traps.html#debts-growth-simulator-section">Credit Card & Debts Simulator</a></div>
+                    <div class="budget-tool"><i class="fa-solid fa-sack-dollar"></i><a href="budgeting_traps.html#budget-tool-section">Budget Tool</a></div>
                 </div>
             </details>
-
+            
             <div class="footer-bottom-row">
                 <div class="stay-connect">
-                    <h4>Stay Connected</h4>
-                    <div class="message-box-footer"><i class="fa-solid fa-paper-plane"></i><a href="#">Message Box</a></div>
+                    <!-- stay connect section -->
+                    <h3>Stay Connected</h3>
+                    <div class="message-box-footer"><i class="fa-solid fa-paper-plane"></i><a href="support_hub.html#message-box-section">Message Box</a></div>
                     <div class="email"><i class="fa-solid fa-envelope"></i><p>moneymatters@gmail.com</p></div>
                 </div>
-
+                <!-- social media section -->
                 <div class="social-media">
-                    <h4>Follow Us</h4>
+                    <h3>Follow Us</h3>
                     <div class="social-icons">
                         <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                         <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -429,16 +451,27 @@
             </div>
         </div>
 
+        <!-- copyright & media attribution -->
         <div class="copyright">
-            &copy; 2026 MoneyMatters by Hubert Kwan. All right reserved | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+            <p>&copy; 2026 MoneyMatters by Hubert Kwan. All right reserved | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+            <p>All information used on this website is based on official New Zealand government and financial education sources.</p>
             <details class="media-attributions">
                 <summary>
-                    <span>Media Attributions</span>
+                    Media Attributions
                     <i class="fa-solid fa-chevron-down"></i>
                 </summary>
+                <p><span>All images used are generated by Chat GPT</span></p>
+                <p><span>Payslip sample, diagrams, and charts by Hubert Kwan</span></p>
             </details>
         </div>
     </footer>
+
+    <!-- back to top button -->
+    <button type="button" id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- javascript invention -->
     <script src="script.js"></script>
     
 </body>

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Money Management for students">
-    <meta name="keywords" content="money management">
+    <meta name="description" content="Learn how to budget, compare needs and wants, avoid debt traps, and manage spending responsibly as a student.">
+    <meta name="keywords" content="budgeting, needs and wants, debt, credit cards, money traps, spending habits, financial literacy">
     <meta name="author" content="Hubert Kwan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f98f8eda6d.js" crossorigin="anonymous"></script>
@@ -11,15 +11,18 @@
     <title>MoneyMatters | Budgeting & Traps</title>
 </head>
 <body>
+    <!-- header section -->
     <header>
+        <!-- navigation bar -->
         <nav class="nav-container">
             <div class="nav-wrapper">
                 <div class="nav-logo">
                     <a href="index.html">
-                        <img src="images/logo-cropped.svg" alt="MoneyMatters Logo">
+                        <img src="images/logo-cropped.svg" alt="MoneyMatters logo">
                     </a>
                 </div>
 
+                <!-- search bar -->
                 <div class="search-container" id="searchContainer">
                     <input type="text" class="expandable-search-input" placeholder="Search...">
                     <button class="search-icon-btn" id="searchToggleBtn" aria-label="Toggle Search">
@@ -27,36 +30,39 @@
                     </button>
                 </div>
 
-                <input type="checkbox" id="menu-toggle">
-                <label for="menu-toggle" class="hamburger-btn" aria-label="Toggle Navigation">
+                <!-- burger menu icon -->
+                <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
+                <label for="menu-toggle" class="hamburger-btn">
                     <i class="fa-solid fa-bars"></i>
                 </label>
 
+                <!-- nav links -->
                 <div class="nav-links">
-                    <div class="home">
+                    <a href="index.html" class="home">
                         <i class="fa-solid fa-house"></i>
-                        <a href="index.html">Home</a>
-                    </div>
-                    <div class="earning-tax">
+                        <span>Home</span>
+                    </a>
+                    <a href="earning_tax.html" class="earning-tax">
                         <i class="fa-solid fa-wallet"></i>
-                        <a href="earning_tax.html">Earning & Taxes</a>
-                    </div>
-                    <div class="saving-invest">
+                        <span>Earning & Taxes</span>
+                    </a>
+                    <a href="saving_invest.html" class="saving-invest">
                         <i class="fa-solid fa-piggy-bank"></i>
-                        <a href="saving_invest.html">Saving & Investment</a>
-                    </div>
-                    <div class="budgeting-traps">
+                        <span>Saving & Investment</span>
+                    </a>
+                    <a href="budgeting_traps.html" class="active budgeting-traps">
                         <i class="fa-solid fa-scale-balanced"></i>
-                        <a href="budgeting_traps.html" class="active">Budgeting & Traps</a>
-                    </div>
-                    <div class="support-hub">
+                        <span>Budgeting & Traps</span>
+                    </a>
+                    <a href="support_hub.html" class="support-hub">
                         <i class="fa-solid fa-headset"></i>
-                        <a href="support_hub.html">Support Hub</a>
-                    </div>
+                        <span>Support Hub</span>
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
+    <!-- hero banner section -->
     <section class="hero-banner budgeting">
         <div class="banner-container">
             <div class="hero-left">
@@ -66,24 +72,29 @@
                 </div>
             </div>
             <div class="hero-right budget">
-                <img src="images/budget_banner.png" alt="A man holding a ipad and think of money management">
+                <img src="images/budget_banner.png" alt="Illustration of a person reviewing money planning on a tablet">
             </div>
         </div>
     </section>
+    <!-- progress bar section -->
     <div class="progress-bar-container">
         <div class="progress-bar" id="progressBar">
-            <a href="#needs-wants-section" class="nav-tab active budgeting-nav">Needs vs Wants Budget Tool</a>
+            <a href="#needs-wants-section" class="nav-tab budgeting-nav">Needs vs Wants</a>
+            <a href="#budget-tool-section" class="nav-tab budgeting-nav">Budget Tool</a>
             <a href="#credit-debts-section" class="nav-tab budgeting-nav">Avoiding Credit & Debt Traps</a>
             <a href="#debts-growth-simulator-section" class="nav-tab budgeting-nav">Debt Growth Simulator</a>
         </div>
     </div>
 
+    <!-- main section -->
     <main class="container">
+        <!-- needs and wants section -->
         <section id="#needs-wants-section" class="content-section">
             <div class="section-heading">
                 <h2>Needs vs Wants</h2>
             </div>
             <div class="needs-wants-container">
+                <!-- needs card -->
                 <div class="nw-card">
                     <h3 class=" nw-red">What is a need?</h3>
                     <div class="nw-card-content">
@@ -102,6 +113,7 @@
                     </div>
                 </div>
 
+                <!-- wants card -->
                 <div class="nw-card">
                     <h3 class=" nw-green">What is a want?</h3>
                     <div class="nw-card-content">
@@ -120,6 +132,7 @@
                     </div>
                 </div>
 
+                <!-- difference card -->
                 <div class="nw-card">
                     <h3 class=" nw-blue">Why difference matter?</h3>
                     <div class="nw-card-content">
@@ -134,21 +147,25 @@
             </div>
         </section>
 
+        <!-- budget tool section -->
         <section id="budget-tool-section" class="content-section">
             <div class="section-heading">
                 <h2>Budget Tool</h2>
             </div>
             <div class="calculator-container">
+                <!-- input form -->
                 <div class="calc-card calc-form">
+                    <!-- monthly income -->
                     <div class="form-group">
                         <label for="totalTakeHome">Monthly Income:</label>
                         <input type="number" id="totalTakeHome" min="0">
                     </div>
-
+                    
                     <span class="heading">Enter Your Monthly Spending:</span>
-
+                    <!-- needs & want spending -->
                     <div class="budget-inputs-grid">
                         <div class="budget-col">
+                            <!-- needs -->
                             <div class="input-needs">
                                 <h4 class="text-red">Needs</h4>
                                 <div class="form-group">
@@ -176,6 +193,7 @@
                                 </div>
                             </div>
 
+                            <!-- wants -->
                             <div class="input-wants">
                                 <h4 class="text-green">Wants</h4>
 
@@ -206,27 +224,27 @@
                             </div>
                         </div>
 
-                            
-
+                        <!-- saving -->
                         <div class="budget-bottom-row">
                             <h4 class="text-blue">Savings</h4>
-
                             <div class="form-group">
                                 <label for="savingGoal">Saving Goal:</label>
                                 <input type="number" id="savingGoal" min="0">
                             </div>
                         </div>
+                        <!-- calculate button -->
                         <button type="button" class="calc-btn budget" id="budgetCalculateBtn">Calculate My Budget</button>
                     </div>
                 </div>
-
+                <!-- convert icon -->
                 <div class="calc-swap-icon budget">
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
 
+                <!-- result card -->
                 <div class="calc-card calc-results budget">
                     <h3>Your Budget Summary,</h3>
-                    
+                    <!-- summary of the spending -->
                     <div class="result-row">
                         <span>Total income</span>
                         <strong id="outBudgetIncome">$0.00/mth</strong>
@@ -252,10 +270,12 @@
                         <strong id="outBudgetLeftover">$0.00/mth</strong>
                     </div>
 
+                    <!-- budget pie chart -->
                     <div class="chart-box">
                         <canvas id="budgetDoughnutChart"></canvas>
                     </div>
 
+                    <!-- tips card -->
                     <div class="calc-tips">
                         <i class="fa-solid fa-lightbulb icon-stroke"></i>
                         <div class="calc-tips-content">
@@ -270,12 +290,13 @@
             </div>
         </section>
 
+        <!-- credit and debt section -->
         <section id="credit-debts-section" class="content-section">
             <div class="section-heading">
                 <h2>Avoiding Credits card & Debt Traps</h2>
                 <p>A credit card lets you spend money borrowed from the card provider. You normally need to repay what you spend, and interest may be charged if you do not pay the balance in full.</p>
             </div>
-
+            <!-- credit & debts traps cards -->
             <div class="credit-debts-container">
                 <div class="debts-card">
                     <h3 class=" debts-yellow">Key things to Know</h3>
@@ -423,6 +444,7 @@
             </div>
         </section>
 
+        <!-- debt simulator section -->
         <section id="debts-growth-simulator-section" class="content-section">
             <div class="section-heading">
                 <h2>Debt Growth Simulator</h2>
@@ -430,7 +452,7 @@
             </div>
 
             <div class="calculator-container">
-                <!-- Inputs Card -->
+                <!-- Inputs form -->
                 <div class="calc-card calc-form">
                     <div class="form-group">
                         <label for="startingDebts">Starting debt:</label>
@@ -447,6 +469,7 @@
                         <input type="number" id="monthlyRepayment" min="0">
                     </div>
 
+                    <!-- calculate button -->
                     <button type="button" class="calc-btn" id="calculateDebtsBtn">Calculate debts</button>
 
                     <div class="calc-disclaimer">
@@ -460,13 +483,15 @@
                     </div>
                 </div>
 
+                <!-- convert icon -->
                 <div class="calc-swap-icon">
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
 
+                <!-- result card -->
                 <div class="calc-card calc-results debt-results">
                     <h3 class="results-heading-green">Your Results</h3>
-                    
+                    <!-- result summary -->
                     <div class="result-row">
                         <span>Estimated time to repay</span>
                         <strong id="outDebtRepayTime">$xxxx.xx</strong>
@@ -484,12 +509,12 @@
 
                     <h4 class="diagram-heading">Estimated Debt growth diagram</h4>
 
-                    <!-- Line Chart Canvas Container -->
+                    <!-- Line Chart  -->
                     <div class="chart-box debt-chart-box">
                         <canvas id="debtGrowthChart"></canvas>
                     </div>
 
-                    <!-- Insight Tip -->
+                    <!-- Tip card -->
                     <div class="calc-tips">
                         <i class="fa-solid fa-lightbulb icon-stroke"></i>
                         <div class="calc-tips-content">
@@ -515,16 +540,19 @@
         </section>
     </main>
 
+   <!-- footer section -->
     <footer class="footer-container">
+        <!-- footer logo -->
         <div class="footer-logo">
-            <img class="footer-logo-img" src="images/footer_logo.png" alt="MoneyMatters Logo">
-            <img class="graduate-img" src="images/graduate.png" alt="Graduate Cap Graphic">
+            <img class="footer-logo-img" src="images/footer_logo.png" alt="MoneyMatters footer logo">
+            <img class="graduate-img" src="images/graduate.png" alt="Graduate cap illustration representing learning and financial education">
         </div>
 
         <div class="footer-sections-row">
+            <!-- site map -->
             <details class="site-map footer-details">
                 <summary class="footer-summary">
-                    <h4>Helpful Guides</h4>
+                    <h3>Helpful Guides</h3>
                     <i class="fa-solid fa-chevron-down footer-chevron"></i>
                 </summary>
                 <div class="footer-links-list">
@@ -535,29 +563,30 @@
                     <div class="support_hub"><i class="fa-solid fa-headset"></i><a href="support_hub.html">Support Hub</a></div>
                 </div>
             </details>
-
+            <!-- tools map -->
             <details class="tool-map footer-details">
                 <summary class="footer-summary">
-                    <h4>Useful Tools</h4>
+                    <h3>Useful Tools</h3>
                     <i class="fa-solid fa-chevron-down footer-chevron"></i>
                 </summary>
                 <div class="footer-links-list">
-                    <div class="tax-calculator"><i class="fa-solid fa-calculator"></i><a href="#">Tax Calculator</a></div>
-                    <div class="compound-interest"><i class="fa-solid fa-money-bill-trend-up"></i><a href="#">Compound Interest Calculator</a></div>
-                    <div class="credit-debts"><i class="fa-regular fa-credit-card"></i><a href="#">Credit Card & Debts Simulator</a></div>
-                    <div class="budget-tool"><i class="fa-solid fa-sack-dollar"></i><a href="#">Budget Tool</a></div>
+                    <div class="tax-calculator"><i class="fa-solid fa-calculator"></i><a href="earning_tax.html#paycheck-calculator-section">Tax Calculator</a></div>
+                    <div class="compound-interest"><i class="fa-solid fa-money-bill-trend-up"></i><a href="saving_invest.html#compound-interest-section">Compound Interest Calculator</a></div>
+                    <div class="credit-debts"><i class="fa-regular fa-credit-card"></i><a href="budgeting_traps.html#debts-growth-simulator-section">Credit Card & Debts Simulator</a></div>
+                    <div class="budget-tool"><i class="fa-solid fa-sack-dollar"></i><a href="budgeting_traps.html#budget-tool-section">Budget Tool</a></div>
                 </div>
             </details>
-
+            
             <div class="footer-bottom-row">
                 <div class="stay-connect">
-                    <h4>Stay Connected</h4>
-                    <div class="message-box-footer"><i class="fa-solid fa-paper-plane"></i><a href="#">Message Box</a></div>
+                    <!-- stay connect section -->
+                    <h3>Stay Connected</h3>
+                    <div class="message-box-footer"><i class="fa-solid fa-paper-plane"></i><a href="support_hub.html#message-box-section">Message Box</a></div>
                     <div class="email"><i class="fa-solid fa-envelope"></i><p>moneymatters@gmail.com</p></div>
                 </div>
-
+                <!-- social media section -->
                 <div class="social-media">
-                    <h4>Follow Us</h4>
+                    <h3>Follow Us</h3>
                     <div class="social-icons">
                         <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                         <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -568,16 +597,26 @@
             </div>
         </div>
 
+        <!-- copyright & media attribution -->
         <div class="copyright">
-            &copy; 2026 MoneyMatters by Hubert Kwan. All right reserved | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+            <p>&copy; 2026 MoneyMatters by Hubert Kwan. All right reserved | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+            <p>All information used on this website is based on official New Zealand government and financial education sources.</p>
             <details class="media-attributions">
                 <summary>
-                    <span>Media Attributions</span>
+                    Media Attributions
                     <i class="fa-solid fa-chevron-down"></i>
                 </summary>
+                <p><span>All images used are generated by Chat GPT</span></p>
+                <p><span>Payslip sample, diagrams, and charts by Hubert Kwan</span></p>
             </details>
         </div>
     </footer>
+
+    <!-- back to top button -->
+    <button type="button" id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
